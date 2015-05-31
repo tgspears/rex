@@ -1,4 +1,4 @@
-var RexApp = angular.module('RexApp', []);
+var RexApp = angular.module('RexApp', ['ngMaterialize']);
 
 RexApp.run(['$rootScope', function($rootScope){
 
