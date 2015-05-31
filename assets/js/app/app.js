@@ -1,4 +1,4 @@
-var RexApp = angular.module('RexApp', ['ngRoute', 'ngMaterial']);
+var RexApp = angular.module('RexApp', []);
 
 RexApp.run(['$rootScope', function($rootScope){
 
