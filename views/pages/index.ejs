@@ -21,12 +21,48 @@
   </nav> -->
 
   <div layout="row" ng-controller="MyController">
-  <md-sidenav md-component-id="left" class="blue darken-2 md-sidenav-left">
-    <a href = "/">HOME</a>
-    <a href = "/myrex">MY REX</a>
-    <a href = "/addrex">ADD REX</a>
-  </md-sidenav>
+    <md-sidenav md-component-id="left" class="blue darken-2 md-sidenav-left">
+      <a href = "/">HOME</a>
+      <a href = "/myrex">MY REX</a>
+      <a href = "/addrex">ADD REX</a>
+      <a class="waves-effect waves-light btn" ng-click="showMyModal()">SHOW REX MODAL</a>
+      <a class="waves-effect waves-light btn" ng-click="showSignup()">SIGNUP</a>
+      <a class="waves-effect waves-light btn" ng-click="showLogin()">LOGIN</a>
+      <a class="waves-effect waves-light btn" ng-click="logOut()">LOGOUT</a>
+    </md-sidenav>
   <md-content>
+
+    <div id="signupModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>signupModal</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+      </div>
+    </div>
+
+    <div id="loginModal" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <h4>loginModal</h4>
+        <p>A bunch of text</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+      </div>
+    </div>
+
+    <div id-"myRexModal" class="modal bottom-sheet">
+      <div class="modal-content">
+        <h4>myRexModal</h4>
+        <p>A bunch of text</p>
+      </div>
+      <ul class="collection">
+        <li class="collection-item avatar">
+          <img src="http://i.ytimg.com/vi/ADowAH-s_Kc/maxresdefault.jpg" alt class="circle">
+          <span class="title">Title</span>
+        </li>
+    </div> 
 
     <md-button ng-click="openLeftMenu()">
       <i class="mdi-navigation-menu"></i>
