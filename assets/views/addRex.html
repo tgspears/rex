@@ -1,7 +1,7 @@
 <div>
 <h1>ADD A REX</h1>
 
-<form name="userForm">
+<form name="userForm" ng-submit="addRex()">
   <md-input-container>
     <label>Name</label>
     <input name="name" ng-model="name" required md-maxlength="10" minlength="4">
@@ -82,9 +82,19 @@
     </div> -->
   </md-input-container>
 
+  <md-input-container>
+    <label>Notes</label>
+    <input name="notes" ng-model="notes" required md-maxlength="10" minlength="4">
+    <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+      <div ng-message="required">This is required!</div>
+      <div ng-message="md-maxlength">That's too long!</div>
+      <div ng-message="minlength">That's too short!</div>
+    </div> -->
+  </md-input-container>
+
   <h2>UPLOAD A PHOTO</h2>
 
-  <a class="waves-effect waves-light btn" ng-click="">SUBMIT</a>
+  <a class="waves-effect waves-light btn" type="submit" ng-click="">SUBMIT</a>
 
 
 </form>
