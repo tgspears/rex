@@ -3,6 +3,7 @@ var RexApp = angular.module('RexApp', ['ngRoute','ngMaterial']);
 RexApp.run(['$rootScope', function($rootScope){
 
   console.log('ANGULAR READY')
+
 }])
 
 RexApp.controller('MyController', function($scope, $mdSidenav) {
@@ -29,6 +30,7 @@ RexApp.controller('MyController', function($scope, $mdSidenav) {
     console.log('showMyRex')
     $('#myRexModal').openModal();
   }
+
 });
 
 RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
