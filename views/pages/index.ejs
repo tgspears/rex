@@ -25,30 +25,93 @@
       <a href = "/">HOME</a>
       <a href = "/myrex">MY REX</a>
       <a href = "/addrex">ADD REX</a>
-      <a class="waves-effect waves-light btn" ng-click="showMyModal()">SHOW REX MODAL</a>
-      <a class="waves-effect waves-light btn" ng-click="showSignup()">SIGNUP</a>
-      <a class="waves-effect waves-light btn" ng-click="showLogin()">LOGIN</a>
-      <a class="waves-effect waves-light btn" ng-click="logOut()">LOGOUT</a>
+      <a class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a>
+      <a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a>
+      <a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a>
+      <a class="waves-effect waves-light btn" aria-label ng-click="logOut()">LOGOUT</a>
     </md-sidenav>
   <md-content>
 
     <div id="signupModal" class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4>signupModal</h4>
-        <p>A bunch of text</p>
+        <h4>SIGNUP</h4>
+        <div>
+
+
+    <form name="userForm">
+
+
+      <md-input-container>
+        <label>Username</label>
+        <input name="username" ng-model="username" required md-maxlength="10" minlength="4">
+        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+          <div ng-message="required">This is required!</div>
+          <div ng-message="md-maxlength">That's too long!</div>
+          <div ng-message="minlength">That's too short!</div>
+        </div> -->
+      </md-input-container>
+
+      <md-input-container>
+        <label>Email</label>
+        <input name="email" ng-model="email" required md-maxlength="10" minlength="4">
+        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+          <div ng-message="required">This is required!</div>
+          <div ng-message="md-maxlength">That's too long!</div>
+          <div ng-message="minlength">That's too short!</div>
+        </div> -->
+      </md-input-container>
+
+      <md-input-container>
+        <label>Password</label>
+        <input name="password" ng-model="password" required md-maxlength="10" minlength="4" type="password">
+        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+          <div ng-message="required">This is required!</div>
+          <div ng-message="md-maxlength">That's too long!</div>
+          <div ng-message="minlength">That's too short!</div>
+        </div> -->
+      </md-input-container>
+
+    </form>
+
+</div>
+
       </div>
+
       <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">SUBMIT</a>
       </div>
     </div>
 
     <div id="loginModal" class="modal modal-fixed-footer">
       <div class="modal-content">
-        <h4>loginModal</h4>
-        <p>A bunch of text</p>
+        <h4>LOGIN</h4>
+
+        <form>
+           <md-input-container>
+            <label>Email</label>
+            <input name="email" ng-model="email" required md-maxlength="10" minlength="4">
+        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+          <div ng-message="required">This is required!</div>
+          <div ng-message="md-maxlength">That's too long!</div>
+          <div ng-message="minlength">That's too short!</div>
+        </div> -->
+           </md-input-container>
+
+          <md-input-container>
+            <label>Password</label>
+            <input name="password" ng-model="password" required md-maxlength="10" minlength="4" type="password">
+            <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+              <div ng-message="required">This is required!</div>
+              <div ng-message="md-maxlength">That's too long!</div>
+              <div ng-message="minlength">That's too short!</div>
+            </div> -->
+          </md-input-container>
+        </form>
+
+
       </div>
       <div class="modal-footer">
-        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">SUBMIT</a>
       </div>
     </div>
 
@@ -62,7 +125,7 @@
           <img src="http://i.ytimg.com/vi/ADowAH-s_Kc/maxresdefault.jpg" alt class="circle">
           <span class="title">Title</span>
         </li>
-    </div> 
+    </div>
 
     <md-button ng-click="openLeftMenu()">
       <i class="mdi-navigation-menu"></i>
