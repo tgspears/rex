@@ -5,27 +5,18 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
-var yelp = require('yelp');
-
-var yelp = require('yelp').createClient({
-  consumer_key:process.env.YELP_CONSUMER_KEY,
-  consumer_secret:process.env.YELP_CONSUMER_SECRET,
-  token:process.env.YELP_CONSUMER_TOKEN,
-  token_secret:process.env.YELP_CONSUMER_SECRET
-});
-
-yelp.search({term:'food', location:'seattle'}, function(error,data){
-  console.log(error);
-  console.log(data);
+var yelp = require("yelp").createClient({
+  consumer_key: 'DGhvxpFiEk-RNYqp7BcjDw',
+  consumer_secret: 'ihXNLNUwBj58u2uTDF0POmvmD4Q',
+  token: '7CzABFWKgI3FecwjmyZG-ThVGB-XfVdJ',
+  token_secret: 'JS84EZg8qIh5sVOimgnyIzuKSXM'
 });
 
 module.exports = {
   yelp: function(req,res){
-  yelp.search({term:'food', location:'seattle'}, function(error,data){
-  console.log(error);
-  console.log(data);
-});
-  }
-
+	  yelp.search({term:'food', location:'seattle'}, function(error,data){
+	  	res.send({data: data, error: error})
+	  });
+	}
 };
 

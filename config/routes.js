@@ -33,7 +33,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': 'PagesController.index',
-  '/yelp': 'RexController.yelp',
+  'get /yelp': 'RexController.yelp',
   'get *':{
     controller:'PagesController',
     action:"index",
