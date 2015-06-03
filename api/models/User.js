@@ -9,16 +9,7 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
   attributes: {
-    firstName:{
-      type:'string',
-      required: true,
-      unique:false
-    },
-    lastName: {
-      type:'string',
-      required: false,
-      unique: false
-    },
+ 
     username:{
       type:'string',
       required: true,

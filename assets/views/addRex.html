@@ -1,10 +1,10 @@
 <div>
 <h1>ADD A REX</h1>
 
-<form name="userForm" ng-submit="addRex()">
+<form ng-submit="addRex()">
   <md-input-container>
     <label>Name</label>
-    <input name="name" ng-model="name" required md-maxlength="10" minlength="4">
+    <input name="name" ng-model="newRex.name" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -12,9 +12,10 @@
     </div> -->
   </md-input-container>
 
+
   <md-input-container>
     <label>Street Address</label>
-    <input name="street" ng-model="street" required md-maxlength="10" minlength="4">
+    <input name="street" ng-model="newRex.street" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -24,7 +25,7 @@
 
   <md-input-container>
     <label>City</label>
-    <input name="city" ng-model="city" required md-maxlength="10" minlength="4">
+    <input name="city" ng-model="newRex.city" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -34,7 +35,7 @@
 
   <md-input-container>
     <label>State/Region</label>
-    <input name="state" ng-model="state" required md-maxlength="10" minlength="4">
+    <input name="state" ng-model="newRex.state" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -44,7 +45,7 @@
 
   <md-input-container>
     <label>Country</label>
-    <input name="country" ng-model="country" required md-maxlength="10" minlength="4">
+    <input name="country" ng-model="newRex.country" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -52,9 +53,33 @@
     </div> -->
   </md-input-container>
 
+  <!--  <md-input-container>
+    <label>Category</label>
+    <input name="category" ng-model="newRex.category" required md-maxlength=20 minlength="4">
+    <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+      <div ng-message="required">This is required!</div>
+      <div ng-message="md-maxlength">That's too long!</div>
+      <div ng-message="minlength">That's too short!</div>
+    </div>
+  </md-input-container> -->
+
+  <md-select ng-model="newRex.category" placeholder="SELECT A CATEGORY">
+  <!-- <md-select-label>Select a Category</md-select-label> -->
+    <md-option value="restaurant">Restaurant</md-option>
+    <md-option value="accommodations">Accommodations</md-option>
+    <md-option value="nature">Nature - Hikes/Views/Outdoors</md-option>
+    <md-option value="shopping">Shopping</md-option>
+    <md-option value="landmarks">Landmarks/Attractions</md-option>
+     <md-option value="events">Events/Festivals</md-option>
+    <md-option value="museums">Museums</md-option>
+     <md-option value="nightlife">Bars/Nightlife</md-option>
+    <md-option value="other">Other</md-option>
+    
+  </md-select>
+
   <md-input-container>
     <label>Phone Number</label>
-    <input name="phone" ng-model="phone" required md-maxlength="10" minlength="4">
+    <input name="phone" ng-model="newRex.phone" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -64,7 +89,7 @@
 
   <md-input-container>
     <label>Email</label>
-    <input name="email" ng-model="email" required md-maxlength="10" minlength="4">
+    <input name="email" ng-model="newRex.email" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -74,7 +99,7 @@
 
   <md-input-container>
     <label>Website</label>
-    <input name="website" ng-model="website" required md-maxlength="10" minlength="4">
+    <input name="website" ng-model="newRex.website" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -84,7 +109,7 @@
 
   <md-input-container>
     <label>Notes</label>
-    <input name="notes" ng-model="notes" required md-maxlength="10" minlength="4">
+    <input name="notes" ng-model="newRex.notes" required md-maxlength=20 minlength="4">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -94,7 +119,7 @@
 
   <h2>UPLOAD A PHOTO</h2>
 
-  <a class="waves-effect waves-light btn" type="submit" ng-click="">SUBMIT</a>
+  <input class="waves-effect waves-light btn" type="submit" ng-click="" value = "SUBMIT">
 
 
 </form>

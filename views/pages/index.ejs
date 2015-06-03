@@ -20,12 +20,14 @@
     </div>
   </nav> -->
 
-  <div layout="row" ng-controller="MyController">
+  <div layout="row" ng-controller="navCtrl">
     <md-sidenav md-component-id="left" class="blue darken-2 md-sidenav-left">
       <a href = "/">HOME</a>
       <a href = "/myrex">MY REX</a>
       <a href = "/addrex">ADD REX</a>
-      <a class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a>
+      <a href = "/search">SEARCH</a>
+      <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a> -->
+
       <a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a>
       <a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a>
       <a class="waves-effect waves-light btn" aria-label ng-click="logOut()">LOGOUT</a>
@@ -38,12 +40,12 @@
         <div>
 
 
-    <form name="userForm">
+    <form ng-submit="signup()">
 
 
       <md-input-container>
         <label>Username</label>
-        <input name="username" ng-model="username" required md-maxlength="10" minlength="4">
+        <input name="username" ng-model="username" required md-maxlength="20" minlength="4">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -53,7 +55,7 @@
 
       <md-input-container>
         <label>Email</label>
-        <input name="email" ng-model="email" required md-maxlength="10" minlength="4">
+        <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -63,7 +65,7 @@
 
       <md-input-container>
         <label>Password</label>
-        <input name="password" ng-model="password" required md-maxlength="10" minlength="4" type="password">
+        <input name="password" ng-model="password" required md-maxlength="20" minlength="4" type="password">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -71,25 +73,25 @@
         </div> -->
       </md-input-container>
 
+      <div>
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
+      </div>
     </form>
 
 </div>
 
       </div>
 
-      <div class="modal-footer">
-        <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">SUBMIT</a>
-      </div>
     </div>
 
     <div id="loginModal" class="modal modal-fixed-footer">
       <div class="modal-content">
         <h4>LOGIN</h4>
 
-        <form>
+        <form ng-submit="login()">
            <md-input-container>
             <label>Email</label>
-            <input name="email" ng-model="email" required md-maxlength="10" minlength="4">
+            <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -99,7 +101,7 @@
 
           <md-input-container>
             <label>Password</label>
-            <input name="password" ng-model="password" required md-maxlength="10" minlength="4" type="password">
+            <input name="password" ng-model="password" required md-maxlength="20" minlength="4" type="password">
             <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
               <div ng-message="required">This is required!</div>
               <div ng-message="md-maxlength">That's too long!</div>
@@ -127,7 +129,7 @@
         </li>
     </div>
 
-    <md-button ng-click="openLeftMenu()">
+    <md-button aria-label="side-nav" ng-click="openLeftMenu()">
       <i class="mdi-navigation-menu"></i>
     </md-button>
   </md-content>
