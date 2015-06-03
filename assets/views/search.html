@@ -15,3 +15,64 @@
     </div>
   </form>
 </div>
+
+<!-- <ul>
+
+{{total}} RESULTS FOUND
+<li ng-repeat="result in results">
+  {{result.name}}
+  {{result.display_phone}}
+  {{result.rating}}
+  {{result.review_count}}
+  <img src={{result.image_url}}>
+  {{result.location.display_address}}
+
+</li>
+</ul>
+ -->
+<ul>
+  {{total}} RESULTS FOUND
+    <li ng-repeat="result in results">
+        <div class="card small">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src={{result.image_url}}>
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
+                  <p>{{result.rating}}|{{result.review_count}}</p>
+
+                  <!-- Hidden form for passing data -->
+                    <form type = "hidden" ng-submit="addRex()">
+                      <input type="hidden" value="{{result.name}}" ng-model="newRex.name">
+                      <input type="hidden" value="{{result.display_phone}}" ng-model="newRex.phone">
+                      <input type="hidden" value="{{result.image_url}}" ng-model="newRex.image">
+                      <input type="hidden" value="{{result.location.address}}" ng-model="newRex.street">
+                      <input type="hidden" value="{{result.location.city}}" ng-model="newRex.city">
+                      <input type="hidden" value="{{result.location.state_code}}" ng-model="newRex.state">
+                      <input type="hidden" value="{{result.location.country_code}}" ng-model="newRex.country">
+                      <input type="hidden" value="{{result.url}}" ng-model="newRex.website">
+                      <button class="btn-floating btn-large waves-effect waves-light red" type="submit"><i class="mdi-content-add"></i></button>
+
+                    </form>
+
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-close right"></i></span>
+                  <p>
+                      {{result.name}}
+                      {{result.display_phone}}
+                      {{result.url}}
+                      {{result.rating}}
+                      {{result.review_count}}
+                      {{result.location.address}}
+                      {{result.location.city}}
+                      {{result.location.state_code}}
+                      {{result.location.country_code}}
+                  </p>
+                </div>
+        </div>
+
+
+    </li>
+</ul>
+
