@@ -4,9 +4,9 @@ RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
 
   console.log('ANGULAR READY')
 
-  UserService.check(function(err,data){
-    console.log('check', err, data);
-  })
+  // UserService.check(function(err,data){
+  //   console.log('check', err, data);
+  // })
 
 }])
 
@@ -34,7 +34,7 @@ RexApp.controller('sidenavController', function($scope, $mdSidenav) {
   // $scope.showMyRex = function(){
   //   console.log('showMyRex')
   //   $('#myRexModal').openModal();
-  // }
+  // } 
 
 });
 
@@ -56,6 +56,10 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
   .when('/search', {
     templateUrl:'/views/search.html',
     controller:'searchRexCtrl'
+  })
+  .when('/editrex/:rexId',{
+    templateUrl:'/views/editRex.html',
+    controller:'showRexCtrl'
   })
   .otherwise({
     templateUrl:'/views/404.html'

@@ -1,8 +1,16 @@
-RexApp.controller('myRexCtrl', ['$scope', function($scope){
-  console.log("MY REX CTRL LOADED");
+RexApp.controller('myRexCtrl', ['$scope','$http', function($scope,$http){
 
-  $scope.searchYelp = function(){
-    yelp.search();
-  }
+	console.log("MY REX CTRL LOADED");
 
-}])
+	$scope.rexes = []
+
+ 	$http({method : 'GET',url : '/api/rex'})
+  .success(function(data, status) {
+      $scope.rexes = data;
+      console.log('data',data)
+   })
+  .error(function(data, status) {
+      alert("Error");
+  });
+
+}]);

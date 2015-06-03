@@ -38,7 +38,7 @@ module.exports.routes = {
     controller:'PagesController',
     action:"index",
     skipAssets:true,
-    // skipRegex: /^\/api\/.*$/
+    skipRegex: /^\/api\/.*$/
   },
 
 

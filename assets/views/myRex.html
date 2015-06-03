@@ -1,3 +1,25 @@
-THIS IS THE MY REX PAGE
-
-<!-- <a class="waves-effect waves-light btn" ng-click="searchYelp()">TEST SEARCH</a> -->
+<h1>My Rex</h1>
+<ul>
+	<table class="table">
+      <thead>
+        <tr>
+          <th>Rex Name</th>
+          <th>City</th>
+          <th>State/Region</th>
+          <th>Country</th>
+          <th>Notes</th>
+          <th>Edit Rex</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="rex in rexes">
+          <td>{{rex.name}}</td>
+          <td>{{rex.city}}</td>
+          <td>{{rex.state}}</td>
+          <td>{{rex.country}}</td>
+          <td>{{rex.notes}}</td>
+          <td><a href="/editrex/{{rex.id}}"class="btn-floating btn-small waves-effect waves-light yellow"><i class="mdi-image-edit"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+</ul>

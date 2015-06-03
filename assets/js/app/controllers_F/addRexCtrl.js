@@ -20,7 +20,7 @@ console.log('ADD REX CTRL LOADED!')
 
 		$http.post('/api/rex', newRex)
 		.success(function(data){
-			console.log('NEW REX' + data)
+			alert(data.name+' has been added to your Rex!')
 		})
 	}
 

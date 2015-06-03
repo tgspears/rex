@@ -19,4 +19,5 @@ module.exports = {
 	  	res.send({data: data, error: error})
 	  });
 	}
+
 };
