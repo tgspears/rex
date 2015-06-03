@@ -1,0 +1,15 @@
+.card.small .card-image{
+	height:250px;
+}
+
+.card{
+	width:30%;
+}
+
+.card-content{
+	height:200px;
+}
+
+.card.small{
+	height:400px;
+}
