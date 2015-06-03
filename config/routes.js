@@ -33,13 +33,13 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': 'PagesController.index',
-  'get /yelp': 'RexController.yelp',
+  'get /yelp': 'RexController.yelpSearch',
   'get *':{
     controller:'PagesController',
     action:"index",
     skipAssets:true,
     // skipRegex: /^\/api\/.*$/
-  }
+  },
 
 
 

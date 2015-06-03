@@ -13,10 +13,10 @@ var yelp = require("yelp").createClient({
 });
 
 module.exports = {
-  yelp: function(req,res){
-	  yelp.search({term:'food', location:'seattle'}, function(error,data){
+  yelpSearch: function(req,res){
+	  yelp.search({term:req.body.term, location:req.body.location}, function(error,data){
+	  	console.log(data)
 	  	res.send({data: data, error: error})
 	  });
 	}
 };
-
