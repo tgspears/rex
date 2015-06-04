@@ -1,80 +1,19 @@
+<div id="home-body">
 <div ng-show="currentUser">Welcome, {{currentUser.username}}</div>
 
+  <div id="logo">
+    <img id="home-graphic" src = "images/logo-1.3g.png">
 
-<a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a>
-<a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a>
+  </div>
 
-
-<form ng-submit="signup()" ng-show="!currentUser">
-
-
-      <md-input-container>
-        <label>Username</label>
-        <input name="username" ng-model="newUser.username" required md-maxlength="20" minlength="4">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-      </md-input-container>
-
-      <md-input-container>
-        <label>Email</label>
-        <input name="email" ng-model="newUser.email" required md-maxlength="20" minlength="4">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-      </md-input-container>
-
-      <md-input-container>
-        <label>Password</label>
-        <input name="password" ng-model="newUser.password" required md-maxlength="20" minlength="4" type="password">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-      </md-input-container>
-
-      <div>
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
-      </div>
-    </form>
-
-
-
-
-        <!-- <div id="loginModal" class="modal modal-fixed-footer"> -->
-      <!-- <div class="modal-content"> -->
-
-        <form ng-submit="login()" ng-show="!currentUser">
-        <h4>LOGIN</h4>
-           <md-input-container>
-            <label>Email</label>
-            <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-           </md-input-container>
-
-          <md-input-container>
-            <label>Password</label>
-            <input name="password" ng-model="password" required md-maxlength="20" minlength="4" type="password">
-            <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-              <div ng-message="required">This is required!</div>
-              <div ng-message="md-maxlength">That's too long!</div>
-              <div ng-message="minlength">That's too short!</div>
-            </div> -->
-          </md-input-container>
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="LOGIN">
-        </form>
-
-
-      <!-- </div> -->
-      <!-- <div class="modal-footer"> -->
-      <!-- </div> -->
-    <!-- </div> -->
+  <div>
+    <md-button ng-click="showDialog($event)" class="md-raised">
+      SIGNUP
+      </md-button>
+  </div>
+   <div>
+    <md-button ng-click="showLoginDialog($event)" class="md-raised">
+      LOGIN
+    </md-button>
+  </div>
+  </div>
