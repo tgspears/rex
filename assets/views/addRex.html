@@ -2,6 +2,17 @@
 <h1>{{whatMode}} A REX</h1>
 
 <form ng-submit="addRex()">
+
+
+  <div class="input-field col s12">
+    <select class="browser-default" ng-model="newRex.listId" value="{{rex.list_id}}">
+      <option value="" disabled selected>SELECT A REX TO ADD THIS LOCATION TO</option>
+      <option ng-repeat="list in lists" value="{{list.id}}">{{list.title}}</option>
+     
+    </select>
+   
+  </div>
+
   <md-input-container>
     <label>Name: {{rex.name}}</label>
     <input name="name" ng-model="newRex.name" value="{{rex.name}}" required>
@@ -52,29 +63,7 @@
     </div> -->
   </md-input-container>
 
-  <!--  <md-input-container>
-    <label>Category</label>
-    <input name="category" ng-model="newRex.category" required minlength="4">
-    <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-      <div ng-message="required">This is required!</div>
-      <div ng-message="md-maxlength">That's too long!</div>
-      <div ng-message="minlength">That's too short!</div>
-    </div>
-  </md-input-container> -->
-
-  <!-- <md-select ng-model="newRex.category" placeholder="SELECT A CATEGORY"> -->
-  <!-- <md-select-label>Select a Category</md-select-label> -->
-  <!--   <md-option value="restaurant">Restaurant</md-option>
-    <md-option value="accommodations">Accommodations</md-option>
-    <md-option value="nature">Nature - Hikes/Views/Outdoors</md-option>
-    <md-option value="shopping">Shopping</md-option>
-    <md-option value="landmarks">Landmarks/Attractions</md-option>
-     <md-option value="events">Events/Festivals</md-option>
-    <md-option value="museums">Museums</md-option>
-     <md-option value="nightlife">Bars/Nightlife</md-option>
-    <md-option value="other">Other</md-option>
-    
-  </md-select> -->
+ 
 
   <div class="input-field col s12">
     <select class="browser-default" ng-model="newRex.category" value="{{rex.category}}">

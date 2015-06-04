@@ -1,6 +1,6 @@
 <h1>MY {{list.title}} REX</h1>
 
-<a class="btn-floating btn-large waves-effect waves-light red" ng-click="showDialog()"><i class="mdi-content-add"></i></a>
+<a class="btn-floating btn-large waves-effect waves-light red" href="/addrex"><i class="mdi-content-add"></i></a>
 
 <ul>
 	<table class="table">
@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr ng-repeat="rex in rexes">
+        <tr ng-repeat="rex in rexes | filter:{category:'restaurant'}">
           <td>{{rex.name}}</td>
           <td>{{rex.city}}</td>
           <td>{{rex.state}}</td>

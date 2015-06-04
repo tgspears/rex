@@ -1,4 +1,4 @@
-RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location', '$mdToast', '$http', function($mdDialog,$scope,UserService,$location,$mdToast,$http){
+RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location', '$mdToast', '$http', '$routeParams',function($mdDialog,$scope,UserService,$location,$mdToast,$http){
 
 	console.log("LIST CTRL UP AND RUNNING!")
 
@@ -53,7 +53,23 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
 
   $scope.showList = function(){
 
-    console.log("made it into showList")
+    console.log($scope.currentUser)
+
+    // console.log("made it into showList")
+    $http({
+      method:'GET',
+      url:'/api/list',
+      params:{
+        userId:UserService.currentUser.id
+      }
+    })
+    .success(function(data, status){
+      $scope.lists = data;
+      console.log('lists',data)
+    })
+    .error(function(data,status){
+      $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
+    })
   }
 
   $scope.showList();

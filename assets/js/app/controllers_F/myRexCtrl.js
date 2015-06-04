@@ -1,4 +1,4 @@
-RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'UserService', function($scope,$http,$mdToast,$mdDialog,UserService){
+RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'UserService', '$routeParams', function($scope,$http,$mdToast,$mdDialog,UserService,$routeParams){
 
   console.log("MY REX CTRL LOADED");
   
@@ -16,8 +16,14 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
 	$scope.rexes = []
 
   $scope.showRex = function(){
-    
-    $http({method : 'GET',url : '/api/rex'})
+    console.log($routeParams)
+    $http({
+      method : 'GET',
+      url : '/api/rex',
+      params:{
+        list_id: $routeParams.id
+      }
+    })
     .success(function(data, status) {
         $scope.rexes = data;
         console.log('data',data)
