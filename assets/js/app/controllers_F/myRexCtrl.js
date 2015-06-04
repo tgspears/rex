@@ -13,4 +13,14 @@ RexApp.controller('myRexCtrl', ['$scope','$http', function($scope,$http){
       alert("Error");
   });
 
+  $scope.deleteRex = function(idx){
+  	$http.delete('/api/rex/'+idx)
+  	.success(function(data,status){
+  		alert('DELETED')
+  		Rex.query(function(data){
+      	$scope.rexes = data;
+    	})
+  	})
+  }
+
 }]);

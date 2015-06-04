@@ -57,9 +57,9 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
     templateUrl:'/views/search.html',
     controller:'searchRexCtrl'
   })
-  .when('/editrex/:rexId',{
-    templateUrl:'/views/editRex.html',
-    controller:'showRexCtrl'
+  .when('/editrex/:id',{
+    templateUrl:'/views/addRex.html',
+    controller:'addRexCtrl'
   })
   .otherwise({
     templateUrl:'/views/404.html'

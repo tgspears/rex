@@ -3,8 +3,8 @@
 
 <form ng-submit="addRex()">
   <md-input-container>
-    <label>Name</label>
-    <input name="name" ng-model="newRex.name" required md-maxlength=20 minlength="4">
+    <label>Name: {{rex.name}}</label>
+    <input name="name" ng-model="newRex.name" required md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -14,8 +14,8 @@
 
 
   <md-input-container>
-    <label>Street Address</label>
-    <input name="street" ng-model="newRex.street" md-maxlength=20>
+    <label>Street Address: {{rex.street}}</label>
+    <input name="street" ng-model="newRex.street" md-maxlength=20 md-minlength=1>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -24,8 +24,8 @@
   </md-input-container>
 
   <md-input-container>
-    <label>City</label>
-    <input name="city" ng-model="newRex.city" required md-maxlength=20>
+    <label>City: {{rex.city}}</label>
+    <input name="city" ng-model="newRex.city" required md-maxlength=20 md-minlength=1>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -34,8 +34,8 @@
   </md-input-container>
 
   <md-input-container>
-    <label>State/Region</label>
-    <input name="state" ng-model="newRex.state" required md-maxlength=20>
+    <label>State/Region: {{rex.state}}</label>
+    <input name="state" ng-model="newRex.state" md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -44,8 +44,8 @@
   </md-input-container>
 
   <md-input-container>
-    <label>Country</label>
-    <input name="country" ng-model="newRex.country" required md-maxlength=20>
+    <label>Country: {{rex.country}}</label>
+    <input name="country" ng-model="newRex.country" md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -78,7 +78,7 @@
   </md-select>
 
   <md-input-container>
-    <label>Phone Number</label>
+    <label>Phone Number: {{rex.phone}}</label>
     <input name="phone" ng-model="newRex.phone" md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
@@ -88,7 +88,7 @@
   </md-input-container>
 
   <md-input-container>
-    <label>Email</label>
+    <label>Email: {{rex.email}}</label>
     <input name="email" ng-model="newRex.email" md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
@@ -98,7 +98,7 @@
   </md-input-container>
 
   <md-input-container>
-    <label>Website</label>
+    <label>Website: {{rex.website}}</label>
     <input name="website" ng-model="newRex.website" md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
@@ -108,7 +108,7 @@
   </md-input-container>
 
   <md-input-container>
-    <label>Notes</label>
+    <label>Notes: {{rex.notes}}</label>
     <input name="notes" ng-model="newRex.notes" md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
@@ -119,7 +119,7 @@
 
   <h2>UPLOAD A PHOTO</h2>
 
-  <input class="waves-effect waves-light btn" type="submit" ng-click="" value = "SUBMIT">
+  <input class="waves-effect waves-light btn" type="submit" value = "SUBMIT">
 
 
 </form>
