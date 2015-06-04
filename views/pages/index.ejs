@@ -1,35 +1,15 @@
 <div ng-app="RexApp">
 
-
-<!--    <nav>
-    <div class="nav-wrapper">
-      <a href="#!" class="brand-logo">Logo</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-      <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="javascript.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="sass.html">Sass</a></li>
-        <li><a href="components.html">Components</a></li>
-        <li><a href="javascript.html">Javascript</a></li>
-        <li><a href="mobile.html">Mobile</a></li>
-      </ul>
-    </div>
-  </nav> -->
-
   <div layout="row" ng-controller="navCtrl">
     <md-sidenav md-component-id="left" class="blue darken-2 md-sidenav-left">
-      <a href = "/">HOME</a>
-      <a href = "/myrex">MY REX</a>
-      <a href = "/addrex">ADD REX</a>
-      <a href = "/search">SEARCH</a>
+      <a class="waves-effect waves-teal btn-flat" href = "/">HOME</a><br>
+      <a class="waves-effect waves-teal btn-flat" href = "/myrex">MY REX</a><br>
+      <a class="waves-effect waves-teal btn-flat" href = "/addrex">ADD REX</a><br>
+      <a class="waves-effect waves-teal btn-flat" href = "/search">SEARCH</a><br>
       <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a> -->
 
-      <a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a>
-      <a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a>
+      <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a> -->
+      <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a> -->
       <a ng-show="currentUser" class="waves-effect waves-light btn" aria-label ng-click="logOut()">LOGOUT</a>
     </md-sidenav>
   <md-content>
@@ -125,9 +105,5 @@
   </div>
 
   <ng-view><ng-view>
-
-
-THIS IS THE INDEX PAGE
-
 
 </div>
