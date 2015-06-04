@@ -1,4 +1,4 @@
-RexApp.controller('homeCtrl', ["$scope", '$http', 'UserService', '$mdToast', function($scope, $http, UserService, $mdToast){
+RexApp.controller('homeCtrl', ['$scope', '$http', 'UserService', '$mdToast', '$mdDialog',function($scope, $http, UserService, $mdToast, $mdDialog){
 
 
 $scope.UserService = UserService;
@@ -22,20 +22,20 @@ $scope.UserService = UserService;
     $('#loginModal').openModal();
   }
 
-  $scope.signup = function(){
-  	console.log("signup!")
+  // $scope.signup = function(){
+  // 	console.log("signup!")
 
-  	var newUser = {
-  		username:$scope.newUser.username,
-  		email:$scope.newUser.email,
-  		password:$scope.newUser.password
-  	}
+  // 	var newUser = {
+  // 		username:$scope.newUser.username,
+  // 		email:$scope.newUser.email,
+  // 		password:$scope.newUser.password
+  // 	}
 
-  	$http.post('/api/user', newUser)
-  	.success(function(data){
-  		console.log('WORKING'+data)
-  	})
-  }
+  // 	$http.post('/api/user', newUser)
+  // 	.success(function(data){
+  // 		console.log('WORKING'+data)
+  // 	})
+  // }
 
   $scope.login = function(){
 
@@ -53,6 +53,40 @@ $scope.UserService = UserService;
         // alert('Invalid authentication credentials. Please try again.');
       }
     })
+  }
+
+
+  $scope.showDialog =function($event) {
+       var parentEl = angular.element(document.body);
+       $mdDialog.show({
+         parent: parentEl,
+         targetEvent: $event,
+         templateUrl:'views/auth/authSignupModal.html',
+         clickOutsideToClose: true,
+         // locals: {
+         //   items: $scope.items
+         // },
+         controller: 'authModalCtrl'
+      });
+    }
+
+    $scope.showLoginDialog =function($event) {
+       var parentEl = angular.element(document.body);
+       $mdDialog.show({
+         parent: parentEl,
+         targetEvent: $event,
+         templateUrl:'views/auth/authLoginModal.html',
+         clickOutsideToClose: true,
+         // locals: {
+         //   items: $scope.items
+         // },
+         controller: 'authModalCtrl'
+      });
+    }
+
+
+  $scope.closeDialog = function(){
+    $mdDialog.hide();
   }
 
 

@@ -1,8 +1,5 @@
-    <!-- <div id="loginModal" class="modal modal-fixed-footer"> -->
-      <!-- <div class="modal-content"> -->
+    <form ng-submit="login()" ng-show="!currentUser">
         <h4>LOGIN</h4>
-
-        <form ng-submit="login()">
            <md-input-container>
             <label>Email</label>
             <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
@@ -22,11 +19,5 @@
               <div ng-message="minlength">That's too short!</div>
             </div> -->
           </md-input-container>
-        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">SUBMIT</a>
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="LOGIN">
         </form>
-
-
-      <!-- </div> -->
-      <!-- <div class="modal-footer"> -->
-      <!-- </div> -->
-    <!-- </div> -->

@@ -1,3 +1,49 @@
+/*COLORS*/
+
+/*DARK BLUE: rgb(16,26,89)
+YELLOW: rgb(252,255,94)
+GREEN: rgb(93,198,67)
+GRAY: rgb(73,71,71)
+WHITE: 
+*/
+
+
+
+/*MODAL*/
+
+md-dialog {
+	width:70%;
+}
+
+/*HOME PAGE*/
+
+#home-body{
+	background-color:rgb(252,250,25);
+}
+
+#home-graphic{
+	width:35%;
+	
+	margin-left:20%;
+	margin-top:50px;
+	/*border:3px solid white;*/
+}
+
+#logo{
+	/*border:3px solid black;*/
+	width:60%;
+}
+
+#rex{
+	font-family: 'Exo 2', sans-serif;
+	font-size:237px;
+	font-weight:300;
+	margin-left:18%;
+	margin-top:-108px;
+}
+
+
+/*SEARCH RESULT PAGE*/
 .card.small .card-image{
 	height:250px;
 }
@@ -17,3 +63,5 @@
 .btn-flat{
 	width:100%;
 }
+
+
