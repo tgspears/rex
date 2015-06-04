@@ -37,7 +37,7 @@ module.exports = {
       required:false,
     },
     website:{
-      type:'string',
+      type:'url',
       required:false
     },
     email:{
