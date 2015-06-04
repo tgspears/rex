@@ -1,4 +1,4 @@
-RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', function($scope, $http,$routeParams){
+RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '$mdToast', function($scope, $http,$routeParams,$location,$mdToast){
 
 console.log('ADD REX CTRL LOADED!')
 
@@ -36,13 +36,15 @@ console.log('ADD REX CTRL LOADED!')
 			$http.put('/api/rex/'+id, rexInfo)
 			.success(function(data){
 				console.log(data)
-				alert(data.name+' has been edited!')
+				// alert(data.name+' has been edited!')
+				$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
 				$location.path('/myrex')
 			})
 		}else{
 			$http.post('/api/rex', rexInfo)
 			.success(function(data){
-				alert(data.name+' has been added to your Rex!')
+				// alert(data.name+' has been added to your Rex!')
+				$mdToast.show($mdToast.simple().content(data.name+'has been added to your Rex!'))
 				$location.path('/myrex')
 			})
 		}

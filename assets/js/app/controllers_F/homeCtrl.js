@@ -1,4 +1,14 @@
-RexApp.controller('homeCtrl', ["$scope", '$http', 'UserService', function($scope, $http, UserService){
+RexApp.controller('homeCtrl', ["$scope", '$http', 'UserService', '$mdToast', function($scope, $http, UserService, $mdToast){
+
+
+$scope.UserService = UserService;
+  $scope.$watchCollection('UserService',function(){
+          $scope.currentUser = UserService.currentUser;
+          
+    
+      console.log('HOME LOG'+UserService.currentUser)
+    })
+
 
   console.log("HOME CTRL LOADED")
 
@@ -34,10 +44,13 @@ RexApp.controller('homeCtrl', ["$scope", '$http', 'UserService', function($scope
 
       if(err){
         console.log(err);
-        alert('An error has occurred.');
+        $mdToast.show($mdToast.simple().content('Oops! Invalid login credentials. Please try again.'))
+        $location.path('/')
       } else {
         console.log(data);
-        alert('Invalid authentication credentials. Please try again.');
+        $mdToast.show($mdToast.simple().content('You have been logged in!'))
+        $location.path('/')
+        // alert('Invalid authentication credentials. Please try again.');
       }
     })
   }
