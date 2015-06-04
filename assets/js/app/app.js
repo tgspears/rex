@@ -45,7 +45,7 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
     controller: 'addRexCtrl'
   })
   .when('/locations',{
-    templateUrl:'/views/myrex.html',
+    templateUrl:'/views/myRex.html',
     controller:'myRexCtrl'
   })
   .when('/search', {

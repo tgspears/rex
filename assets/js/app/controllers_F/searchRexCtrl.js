@@ -1,12 +1,11 @@
 RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService', function($scope,$http,$location,UserService){
 	console.log('Search Controller Loaded!')
 
-$scope.UserService = UserService;
-
+	$scope.UserService = UserService;
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-console.log($scope.currentUser)
+		console.log($scope.currentUser)
     if($scope.currentUser==false){
       $location.path('/')
     }
@@ -39,12 +38,12 @@ console.log($scope.currentUser)
 
 		console.log(yelpReq)
 
-	$http(yelpReq).success(function(data){
-		console.log(data);
-		$scope.results = data.data.businesses;
-		// console.log('NAME:', data.data.businesses[0].name)
-		$scope.total = data.data.total;
-	})
+		$http(yelpReq).success(function(data){
+			console.log(data);
+			$scope.results = data.data.businesses;
+			// console.log('NAME:', data.data.businesses[0].name)
+			$scope.total = data.data.total;
+		})
 
    }
 

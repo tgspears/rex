@@ -38,19 +38,17 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
   }
 
   $scope.showDialog =function($event) {
-       // var parentEl = angular.element(document.body);
-       $mdDialog.show({
-         // parent: parentEl,
-         // targetEvent: $event,
-         templateUrl:'views/addListModal.html',
-         clickOutsideToClose: true,
-         // locals: {
-         //   items: $scope.items
-         // },
-         controller: 'listCtrl'
-      });
-    }
-  
-
+     // var parentEl = angular.element(document.body);
+     $mdDialog.show({
+       // parent: parentEl,
+       // targetEvent: $event,
+       templateUrl:'views/addListModal.html',
+       clickOutsideToClose: true,
+       // locals: {
+       //   items: $scope.items
+       // },
+       controller: 'listCtrl'
+    });
+  }
 
 }])

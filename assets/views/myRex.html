@@ -13,6 +13,7 @@
           <th>Notes</th>
           <th>Edit Rex</th>
           <th>Delete Rex</th>
+          <th>Send Rex</th>
         </tr>
       </thead>
       <tbody>
@@ -24,9 +25,11 @@
           <td>{{rex.notes}}</td>
           <td><a href="/editrex/{{rex.id}}" class="btn-floating btn-small waves-effect waves-light blue"><i class="mdi-image-edit"></i></a></td>
           <td><a ng-click="deleteRex(rex.id)" class="btn-floating btn-small waves-effect waves-light red"><i class="mdi-action-delete"></i></a></td>
+          <td><a ng-click="sendEmail()" class="btn-floating btn-small waves-effect waves-light green"><i class="mdi-communication-email"></i></a></td>
         </tr>
       </tbody>
     </table>
 
-    <a ng-click="sendEmail()">SHIP IT</a>
+    <a ng-click="sendEmail('tg.spears@gmail.com','another test','wasssuuuup')">Trevor</a>
+    <a ng-click="sendEmail('lauren.nicole.go@gmail.com','This is live','Yay we can send emails from heroku!'">Lauren</a>
 </ul>

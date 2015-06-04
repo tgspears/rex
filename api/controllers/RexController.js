@@ -12,16 +12,38 @@ var yelp = require("yelp").createClient({
   token_secret: process.env.YELP_TOKEN_SECRET
 });
 
+var sendgrid = require("sendgrid")(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+
 module.exports = {
 
   yelpSearch: function(req,res){
+
   	console.log(req.params);
 	  yelp.search({term:req.query.term, location:req.query.location}, function(error,data){
 	  	console.log(data)
 	  	res.send({data: data, error: error})
 	  });
-	// res.send(req.params)
+
+	},
+
+	sendEmail: function(req,res){
+
+		console.log('sendEmail_B');
+		console.log(req.params);
+
+		var email = new sendgrid.Email();
+
+		sendgrid.send({
+			to:req.query.to,
+			from:'sendrexgospears@gmail.com',
+			subject:req.query.subject,
+			text:req.query.text
+		}, function(err,json){
+			if(err){
+				return console.error(err);
+			}
+			console.log(json);
+		});
 
 	}
-
 };

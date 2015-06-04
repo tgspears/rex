@@ -1,41 +1,27 @@
-// RexApp.factory('EmailService',['$http',function($http){
-// 	return{
-// 		var sendgrid = require("sendgrid")(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
+RexApp.factory('EmailService',['$http',function($http){
+	
+	return{
 
-// 		sendEmail:function(sendTo,title,rexId){
+		sendEmail:function(rexId,sendTo,subject,text){
 
-// 			console.log('triggered sendEmail')
-// 			$http({method:'GET',url:'/api/rex/'+rexId})
-// 				.success(function(data,status){
-// 					var email = new sendgrid.Email();
+			var sendgrid = require("sendgrid")(process.env.SENDGRID_USERNAME, process.env.SENDGRID_PASSWORD);
 
-// 					sendgrid.send({
-// 						to: 'tg.spears@gmail.com',
-// 						from: 'tg.spears@gmail.com',
-// 						subject: 'Testing',
-// 						text: 'Testing Testing'
-// 					}, function(err,json){
-// 						if err {return console.error(err);}
-// 						console.log(json);
-// 					}
-// 					})
-// 				})
-
-// 		}
-// 	}
-// }])
-
-
-
-// module.exports = {
-// 	sendEmail: function(req,res){
-// 		console.log('triggered email');
-// 		var email = new sendgrid.Email();
-
-// 		email.addTo("tg.spears@gmail.com");
-// 		email.setForm("tg.spears@gmail.com");
-// 		email.setSubject("Testing");
-// 		email.setHtml("Testing Testing");
-
-// 		sendgrid.send(email);
-// 	},
+			console.log('triggered sendEmail')
+			// $http({method:'GET',url:'/api/rex/'+rexId})
+			// 	.success(function(data,status){
+			// 		var email = new sendgrid.Email();
+			// 		sendgrid.send({
+			// 			to: sendTo,
+			// 			from: 'sendrexgospears@gmail.com',
+			// 			subject: subject,
+			// 			text: text
+			// 		}, function(err,json){
+			// 			if(err) {
+			// 				return console.error(err);
+			// 		}
+			// 		console.log(json);
+			// 	})
+			// })
+		}
+	}
+}])
