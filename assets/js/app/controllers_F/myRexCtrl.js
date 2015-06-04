@@ -1,4 +1,4 @@
-RexApp.controller('myRexCtrl', ['$scope','$http', function($scope,$http){
+RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', function($scope,$http,$mdToast){
 
 	console.log("MY REX CTRL LOADED");
 
@@ -22,7 +22,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', function($scope,$http){
   $scope.deleteRex = function(idx){
     $http.delete('/api/rex/'+idx)
     .success(function(data,status){
-      alert('DELETED')
+      $mdToast.show($mdToast.simple().content('Your Rex has been deleted.'))
 
       $scope.showRex();
 

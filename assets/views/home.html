@@ -1,11 +1,11 @@
-THIS IS THE HOME PAGE
+<div ng-show="currentUser">Welcome, {{currentUser.username}}</div>
 
 
 <a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a>
 <a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a>
 
 
-<form ng-submit="signup()">
+<form ng-submit="signup()" ng-show="!currentUser">
 
 
       <md-input-container>
@@ -48,9 +48,9 @@ THIS IS THE HOME PAGE
 
         <!-- <div id="loginModal" class="modal modal-fixed-footer"> -->
       <!-- <div class="modal-content"> -->
-        <h4>LOGIN</h4>
 
-        <form ng-submit="login()">
+        <form ng-submit="login()" ng-show="!currentUser">
+        <h4>LOGIN</h4>
            <md-input-container>
             <label>Email</label>
             <input name="email" ng-model="email" required md-maxlength="20" minlength="4">

@@ -1,4 +1,4 @@
-RexApp.controller('navCtrl', ['$scope', '$rootScope', '$mdSidenav', 'UserService', function($scope, $rootScope, $mdSidenav, UserService){
+RexApp.controller('navCtrl', ['$scope', '$rootScope', '$mdSidenav', 'UserService', '$mdToast', '$location', function($scope, $rootScope, $mdSidenav, UserService, $mdToast, $location){
 
   console.log('NAV CTRL LOADED')
 
@@ -28,8 +28,10 @@ RexApp.controller('navCtrl', ['$scope', '$rootScope', '$mdSidenav', 'UserService
   }
 
   $scope.logOut = function(){
-    console.log('This will log you out');
+    
     UserService.logout(function(err,data){
+      $location.path('/');
+      $mdToast.show($mdToast.simple().content('You have been logged out!'));
       console.log('LOGGED OUT')
     })
     // confirm('This will log you out');
