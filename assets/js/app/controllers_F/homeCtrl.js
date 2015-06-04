@@ -1,4 +1,4 @@
-RexApp.controller('homeCtrl', ["$scope", '$http', function($scope, $http){
+RexApp.controller('homeCtrl', ["$scope", '$http', 'UserService', function($scope, $http, UserService){
 
   console.log("HOME CTRL LOADED")
 
@@ -25,6 +25,21 @@ RexApp.controller('homeCtrl', ["$scope", '$http', function($scope, $http){
   	.success(function(data){
   		console.log('WORKING'+data)
   	})
+  }
+
+  $scope.login = function(){
+
+    console.log('HELLO')
+    UserService.login($scope.email, $scope.password, function(err,data){
+
+      if(err){
+        console.log(err);
+        alert('An error has occurred.');
+      } else {
+        console.log(data);
+        alert('Invalid authentication credentials. Please try again.');
+      }
+    })
   }
 
 

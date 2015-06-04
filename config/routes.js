@@ -34,6 +34,9 @@ module.exports.routes = {
 
   '/': 'PagesController.index',
   'get /yelp': 'RexController.yelpSearch',
+  'post /api/auth':'AuthModalController.login',
+  'get /api/auth':'AuthModalController.check',
+  'delete /api/auth':'AuthModalController.logout',
   'get *':{
     controller:'PagesController',
     action:"index",

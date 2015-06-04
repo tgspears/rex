@@ -42,16 +42,9 @@
                   <p>{{result.rating}}|{{result.review_count}}</p>
 
                   <!-- Hidden form for passing data -->
-                    <form type = "hidden" ng-submit="addRex()">
-                      <input type="hidden" value="{{result.name}}" ng-model="newRex.name">
-                      <input type="hidden" value="{{result.display_phone}}" ng-model="newRex.phone">
-                      <input type="hidden" value="{{result.image_url}}" ng-model="newRex.image">
-                      <input type="hidden" value="{{result.location.address}}" ng-model="newRex.street">
-                      <input type="hidden" value="{{result.location.city}}" ng-model="newRex.city">
-                      <input type="hidden" value="{{result.location.state_code}}" ng-model="newRex.state">
-                      <input type="hidden" value="{{result.location.country_code}}" ng-model="newRex.country">
-                      <input type="hidden" value="{{result.url}}" ng-model="newRex.website">
-                      <button class="btn-floating btn-large waves-effect waves-light red" type="submit"><i class="mdi-content-add"></i></button>
+                    <form ng-submit="addYelpRex($index)">
+                        
+                        <button class="btn-floating btn-large waves-effect waves-light red" type="submit"><i class="mdi-content-add"></i></button>
 
                     </form>
 

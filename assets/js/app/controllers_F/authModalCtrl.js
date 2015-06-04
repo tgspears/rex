@@ -1,4 +1,4 @@
-RexApp.controller('authModalCtrl', ['$scope', 'UserService', function($scope,UserService){
+RexApp.controller('authModalCtrl', ['$scope', 'UserService', '$modal', function($scope,UserService,$modal){
   console.log("MY AUTH CTRL LOADED");
 
   $scope.login = function(){
