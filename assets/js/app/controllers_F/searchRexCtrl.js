@@ -49,7 +49,7 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 
 
    $scope.addYelpRex = function(idx){
-   	// console.log($scope.newYelpRex)
+
 
    	var newYelpRex = {
 			name:$scope.results[idx].name,
@@ -63,7 +63,6 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 			website:$scope.results[idx].url
 			// notes:$scope.results[idx].notes
 		}
-   	// console.log('undefined?', newYelpRex)
 
 		$http.post('/api/rex', newYelpRex)
 		.success(function(data){

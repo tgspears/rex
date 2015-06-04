@@ -1,101 +1,20 @@
 <div ng-app="RexApp">
 
   <div layout="row" ng-controller="navCtrl">
-    <md-sidenav md-component-id="left" class="blue darken-2 md-sidenav-left">
-      <a class="waves-effect waves-teal btn-flat" href = "/">HOME</a><br>
-      <a class="waves-effect waves-teal btn-flat" href = "/myrex">MY REX</a><br>
-      <a class="waves-effect waves-teal btn-flat" href = "/addrex">ADD REX</a><br>
-      <a class="waves-effect waves-teal btn-flat" href = "/search">SEARCH</a><br>
+    <md-sidenav md-component-id="left" class="grey darken-4 md-sidenav-left">
+      <a href="/"><img id="nav-logo" src = "/images/logo2w.png"></a>
+      <a class="nav-links waves-effect waves-purple btn-flat" href = "/">HOME</a><br>
+      <a class="nav-links waves-effect waves-purple btn-flat" href = "/myrex">MY REX</a><br>
+      <a class="nav-links waves-effect waves-purple btn-flat" href = "/addrex">ADD REX</a><br>
+      <a class="nav-links waves-effect waves-purple btn-flat" href = "/search">SEARCH</a><br>
       <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a> -->
 
-      <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showSignup()">SIGNUP</a> -->
-      <!-- <a class="waves-effect waves-light btn" aria-label ng-click="showLogin()">LOGIN</a> -->
+      
       <a ng-show="currentUser" class="waves-effect waves-light btn-flat" aria-label ng-click="logOut()">LOGOUT</a>
     </md-sidenav>
   <md-content>
 
-    <div id="signupModal" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <h4>SIGNUP</h4>
-        <div>
-
-
-    <form ng-submit="signup()">
-
-
-      <md-input-container>
-        <label>Username</label>
-        <input name="username" ng-model="username" required md-maxlength="20" minlength="4">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-      </md-input-container>
-
-      <md-input-container>
-        <label>Email</label>
-        <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-      </md-input-container>
-
-      <md-input-container>
-        <label>Password</label>
-        <input name="password" ng-model="password" required md-maxlength="20" minlength="4" type="password">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-      </md-input-container>
-
-      <div>
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
-      </div>
-    </form>
-
-</div>
-
-      </div>
-
-    </div>
-
-    <div id="loginModal" class="modal modal-fixed-footer">
-      <div class="modal-content">
-        <h4>LOGIN</h4>
-
-        <form ng-submit="login()">
-           <md-input-container>
-            <label>Email</label>
-            <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
-        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-          <div ng-message="required">This is required!</div>
-          <div ng-message="md-maxlength">That's too long!</div>
-          <div ng-message="minlength">That's too short!</div>
-        </div> -->
-           </md-input-container>
-
-          <md-input-container>
-            <label>Password</label>
-            <input name="password" ng-model="password" required md-maxlength="20" minlength="4" type="password">
-            <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-              <div ng-message="required">This is required!</div>
-              <div ng-message="md-maxlength">That's too long!</div>
-              <div ng-message="minlength">That's too short!</div>
-            </div> -->
-          </md-input-container>
-        </form>
-
-
-      </div>
-      <div class="modal-footer">
-        <a href="#" class="modal-action modal-close waves-effect waves-green btn-flat ">SUBMIT</a>
-      </div>
-    </div>
+   
 
     <md-button aria-label="side-nav" ng-click="openLeftMenu()">
       <i class="mdi-navigation-menu"></i>

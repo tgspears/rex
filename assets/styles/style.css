@@ -1,12 +1,17 @@
 /*COLORS*/
 
-/*DARK BLUE: rgb(16,26,89)
-YELLOW: rgb(252,255,94)
-GREEN: rgb(93,198,67)
-GRAY: rgb(73,71,71)
+/*DARK BLUE: rgb(16,26,89) or indigo darken-4 (not quite)
+YELLOW: rgb(255,241,94) OR yellow lighten-2
+GREEN: rgb(93,198,67) OR light-green accent-4
+GRAY: rgb(45,49,60) OR grey darken-4
 WHITE: 
+PURPLE:rgb(148,36,159) purple lighten-1;
 */
 
+/*GENERAL*/
+body {
+	font-family: 'Exo 2', sans-serif;
+}
 
 
 /*MODAL*/
@@ -15,23 +20,63 @@ md-dialog {
 	width:70%;
 }
 
+/*NAV*/
+#nav-logo{
+	/*min-width:100px;*/
+	width:24%;
+	border:3px solid white;
+	border-radius:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+	padding-right:15px;
+
+}
+
+img#nav-logo{
+	margin-left:30px;
+	margin-top:30px;
+	margin-bottom:10px;
+}
+
+.nav-links{
+	/*color:rgb(148,36,159);*/
+	color:white;
+	/*text-shadow:1px 1px white;*/
+}
+
 /*HOME PAGE*/
 
+
+
 #home-body{
-	background-color:rgb(252,250,25);
+	background-color:rgb(16,26,89);
+	/*background-color:white;*/
+	height:100vh;
 }
 
 #home-graphic{
-	width:35%;
-	
-	margin-left:20%;
+	/*min-width:100px;*/
+	/*max-width:19%;
+	min-height:100px;*/
+	width:100%;
+/*	margin-left:40.5%;*/
 	margin-top:50px;
-	/*border:3px solid white;*/
+	text-align:center;
+/*	border:5px solid white;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-left:50px;
+	padding-right:50px;
+	border-radius:5px;*/
 }
 
 #logo{
 	/*border:3px solid black;*/
-	width:60%;
+	width:19%;
+	margin-left:40.5%;
+	text-align:center;
+	/*min-height:100px;*/
 }
 
 #rex{
@@ -39,7 +84,23 @@ md-dialog {
 	font-size:237px;
 	font-weight:300;
 	margin-left:18%;
-	margin-top:-108px;
+	margin-top:-100px;
+}
+
+#buttons{
+	width:19%;
+	margin-left:40%;
+}
+
+.home-btns{
+	width:100%;
+
+}
+
+button.md-raised.home-btns.md-button{
+	/*background-color:rgb(93,198,67);*/
+	color:white;
+
 }
 
 

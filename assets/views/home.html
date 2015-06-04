@@ -2,18 +2,18 @@
 <div ng-show="currentUser">Welcome, {{currentUser.username}}</div>
 
   <div id="logo">
-    <img id="home-graphic" src = "images/logo-1.3g.png">
+    <img id="home-graphic" src = "images/logo2w.png">
 
   </div>
 
-  
-    <md-button ng-show="!currentUser" ng-click="showDialog('signup')" class="md-raised">
+  <div id="buttons">
+    <md-button ng-show="!currentUser" ng-click="showDialog('signup')" class="md-raised home-btns purple lighten-1">
       SIGNUP
     </md-button>
   
 
-    <md-button ng-show="!currentUser" ng-click="showDialog('login')" class="md-raised">
+    <md-button ng-show="!currentUser" ng-click="showDialog('login')" class="md-raised home-btns purple lighten-1">
       LOGIN
     </md-button>
-  
   </div>
+</div>
