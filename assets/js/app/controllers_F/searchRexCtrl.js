@@ -7,9 +7,9 @@ $scope.UserService = UserService;
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
 console.log($scope.currentUser)
-    if($scope.currenUser==undefined){
-      $location.path('/')
-    }
+    // if($scope.currenUser==undefined){
+    //   $location.path('/')
+    // }
   });
 
 	// $scope.newYelpRex = {
@@ -58,7 +58,7 @@ console.log($scope.currentUser)
 			city:$scope.results[idx].location.city,
 			state:$scope.results[idx].location.state_code,
 			country:$scope.results[idx].location.country_code,
-			phone:$scope.results[idx].display_phone,
+			phone:$scope.results[idx].phone,
 			// email:$scope.results[idx].email,
 			// category:$scope.results[idx].category,
 			website:$scope.results[idx].url
@@ -68,7 +68,9 @@ console.log($scope.currentUser)
 
 		$http.post('/api/rex', newYelpRex)
 		.success(function(data){
-			alert(data.name+' has been added to your Rex!')
+			var id=data.id
+			$location.path('/editrex/'+id)
+			// alert(data.name+' has been added to your Rex!')
 		})
 
    }

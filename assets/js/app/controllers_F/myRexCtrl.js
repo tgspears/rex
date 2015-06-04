@@ -4,23 +4,33 @@ RexApp.controller('myRexCtrl', ['$scope','$http', function($scope,$http){
 
 	$scope.rexes = []
 
- 	$http({method : 'GET',url : '/api/rex'})
-  .success(function(data, status) {
-      $scope.rexes = data;
-      console.log('data',data)
-   })
-  .error(function(data, status) {
-      alert("Error");
-  });
+  // RexApp.run([function(){
+  // }])
+
+  $scope.showRex = function(){
+    
+    $http({method : 'GET',url : '/api/rex'})
+    .success(function(data, status) {
+        $scope.rexes = data;
+        console.log('data',data)
+     })
+    .error(function(data, status) {
+        alert("Error");
+    });
+  }
 
   $scope.deleteRex = function(idx){
-  	$http.delete('/api/rex/'+idx)
-  	.success(function(data,status){
-  		alert('DELETED')
-  		Rex.query(function(data){
-      	$scope.rexes = data;
-    	})
-  	})
+    $http.delete('/api/rex/'+idx)
+    .success(function(data,status){
+      alert('DELETED')
+
+      $scope.showRex();
+
+      Rex.query(function(data){
+        $scope.rexes = data;
+      })
+    })
   }
+    $scope.showRex();
 
 }]);

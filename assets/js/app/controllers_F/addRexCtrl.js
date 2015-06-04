@@ -32,6 +32,7 @@ console.log('ADD REX CTRL LOADED!')
 			notes:$scope.newRex.notes
 		}
 		if(id){
+			$scope.content = "<p>blah blah</p>";
 			$http.put('/api/rex/'+id, rexInfo)
 			.success(function(data){
 				console.log(data)
