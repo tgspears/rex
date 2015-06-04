@@ -1,11 +1,12 @@
 RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', function($scope,$http,$mdToast){
 
-	console.log("MY REX CTRL LOADED");
+  console.log("MY REX CTRL LOADED");
 
-	$scope.rexes = []
+  $scope.rexes = []
 
-  // RexApp.run([function(){
-  // }])
+  // $scope.sendEmail = function(){
+  //   EmailService.sendEmail('wasd','wasd','wasd');
+  // }
 
   $scope.showRex = function(){
     
@@ -31,6 +32,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', function($scope,$h
       })
     })
   }
-    $scope.showRex();
+
+  $scope.showRex();
 
 }]);
