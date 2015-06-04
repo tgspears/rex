@@ -4,7 +4,7 @@
 <form ng-submit="addRex()">
   <md-input-container>
     <label>Name: {{rex.name}}</label>
-    <input name="name" ng-model="newRex.name" required md-maxlength=20>
+    <input name="name" placeholder="rex.name" ng-model="newRex.name" required md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
