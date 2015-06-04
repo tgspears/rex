@@ -39,10 +39,13 @@ RexApp.factory('UserService', ['$http', function($http){
 		},
 
 		logout: function(callback){
-			this.currentUser = false;
+
+			var self = this;
+			
 
 			$http.delete('/api/auth')
 			.success(function(data){
+			self.currentUser = false;
 				callback(null,data);
 			})
 			.error(function(err){

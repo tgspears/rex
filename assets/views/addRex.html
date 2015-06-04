@@ -63,9 +63,9 @@
     </div>
   </md-input-container> -->
 
-  <md-select ng-model="newRex.category" placeholder="SELECT A CATEGORY">
+  <!-- <md-select ng-model="newRex.category" placeholder="SELECT A CATEGORY"> -->
   <!-- <md-select-label>Select a Category</md-select-label> -->
-    <md-option value="restaurant">Restaurant</md-option>
+  <!--   <md-option value="restaurant">Restaurant</md-option>
     <md-option value="accommodations">Accommodations</md-option>
     <md-option value="nature">Nature - Hikes/Views/Outdoors</md-option>
     <md-option value="shopping">Shopping</md-option>
@@ -75,7 +75,25 @@
      <md-option value="nightlife">Bars/Nightlife</md-option>
     <md-option value="other">Other</md-option>
     
-  </md-select>
+  </md-select> -->
+
+  <div class="input-field col s12">
+    <select class="browser-default" ng-model="newRex.category">
+      <option value="" disabled selected>SELECT A CATEGORY</option>
+      <option value="restaurant">Restaurant</option>
+      <option value="accommodations">Accommodations</option>
+      <option value="nature">Nature - Hikes/Views/Outdoors</option>
+      <option value="shopping">Shopping</option>
+      <option value="landmarks">Landmarks/Attractions</option>
+      <option value="events">Events/Festivals</option>
+      <option value="museums">Museums</option>
+      <option value="nightlife">Bars/Nightlife</option>
+      <option value="other">Other</option>
+    </select>
+   
+  </div>
+
+
 
   <md-input-container>
     <label>Phone Number</label>

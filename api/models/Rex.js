@@ -30,7 +30,7 @@ module.exports = {
     },
     category:{
       type:'string',
-      required:true
+      required:false
     },
     phone:{
       type:'integer',
