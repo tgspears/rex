@@ -1,10 +1,10 @@
 <div>
-<h1>ADD A REX</h1>
+<h1>{{whatMode}} A REX</h1>
 
 <form ng-submit="addRex()">
   <md-input-container>
     <label>Name: {{rex.name}}</label>
-    <input name="name" ng-model="newRex.name" value="{{rex.name}}" required md-maxlength=20>
+    <input name="name" ng-model="newRex.name" value="{{rex.name}}" required>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -15,7 +15,7 @@
 
   <md-input-container>
     <label>Street Address: {{rex.street}}</label>
-    <input name="street" ng-model="newRex.street" md-maxlength=20 md-minlength=1>
+    <input name="street" ng-model="newRex.street" md-minlength=1>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -25,7 +25,7 @@
 
   <md-input-container>
     <label>City: {{rex.city}}</label>
-    <input name="city" ng-model="newRex.city" value="{{rex.city}}" required md-maxlength=20 md-minlength=1>
+    <input name="city" ng-model="newRex.city" value="{{rex.city}}" required md-minlength=1>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -35,7 +35,7 @@
 
   <md-input-container>
     <label>State/Region: {{rex.state}}</label>
-    <input name="state" ng-model="newRex.state" md-maxlength=20>
+    <input name="state" ng-model="newRex.state">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -45,7 +45,7 @@
 
   <md-input-container>
     <label>Country: {{rex.country}}</label>
-    <input name="country" ng-model="newRex.country" md-maxlength=20>
+    <input name="country" ng-model="newRex.country">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -55,7 +55,7 @@
 
   <!--  <md-input-container>
     <label>Category</label>
-    <input name="category" ng-model="newRex.category" required md-maxlength=20 minlength="4">
+    <input name="category" ng-model="newRex.category" required minlength="4">
     <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -97,7 +97,7 @@
 
   <md-input-container>
     <label>Phone Number: {{rex.phone}}</label>
-    <input name="phone" ng-model="newRex.phone" md-maxlength=20>
+    <input name="phone" ng-model="newRex.phone">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -107,7 +107,7 @@
 
   <md-input-container>
     <label>Email: {{rex.email}}</label>
-    <input name="email" ng-model="newRex.email" md-maxlength=20>
+    <input name="email" ng-model="newRex.email">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -117,7 +117,7 @@
 
   <md-input-container>
     <label>Website: {{rex.website}}</label>
-    <input name="website" ng-model="newRex.website" md-maxlength=20>
+    <input name="website" ng-model="newRex.website">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -127,7 +127,7 @@
 
   <md-input-container>
     <label>Notes: {{rex.notes}}</label>
-    <input name="notes" ng-model="newRex.notes" md-maxlength=20>
+    <input name="notes" ng-model="newRex.notes" value="{{rex.notes}}" md-maxlength=255>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
