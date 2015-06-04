@@ -9,6 +9,7 @@
           <th>Country</th>
           <th>Notes</th>
           <th>Edit Rex</th>
+          <th>Delete Rex</th>
         </tr>
       </thead>
       <tbody>
@@ -18,7 +19,8 @@
           <td>{{rex.state}}</td>
           <td>{{rex.country}}</td>
           <td>{{rex.notes}}</td>
-          <td><a href="/editrex/{{rex.id}}"class="btn-floating btn-small waves-effect waves-light yellow"><i class="mdi-image-edit"></i></a></td>
+          <td><a href="/editrex/{{rex.id}}" class="btn-floating btn-small waves-effect waves-light blue"><i class="mdi-image-edit"></i></a></td>
+          <td><a ng-click="deleteRex(rex.id)" class="btn-floating btn-small waves-effect waves-light red"><i class="mdi-action-delete"></i></a></td>
         </tr>
       </tbody>
     </table>

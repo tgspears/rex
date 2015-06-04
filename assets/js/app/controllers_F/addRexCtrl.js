@@ -1,11 +1,25 @@
-RexApp.controller('addRexCtrl',['$scope', '$http', function($scope, $http){
+RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', function($scope, $http,$routeParams){
 
 console.log('ADD REX CTRL LOADED!')
+
+	var id = $routeParams.id
+
+	if (id){
+		console.log(id)
+		$http({method : 'GET',url : '/api/rex/'+id})
+		  .success(function(data, status) {
+		      $scope.rex = data;
+		      console.log('data',data)
+		   })
+		  .error(function(data, status) {
+		      alert("Error",data);
+		});
+	}
 
 	$scope.addRex = function(){
 		console.log("add rex working!");
 
-		var newRex = {
+		var rexInfo = {
 			name:$scope.newRex.name,
 			street:$scope.newRex.street,
 			city:$scope.newRex.city,
@@ -17,11 +31,17 @@ console.log('ADD REX CTRL LOADED!')
 			website:$scope.newRex.website,
 			notes:$scope.newRex.notes
 		}
-
-		$http.post('/api/rex', newRex)
-		.success(function(data){
-			alert(data.name+' has been added to your Rex!')
-		})
+		if(id){
+			$http.put('/api/rex/'+id, rexInfo)
+			.success(function(data){
+				alert(data.name+' has been edited!')
+			})
+		}else{
+			$http.post('/api/rex', rexInfo)
+			.success(function(data){
+				alert(data.name+' has been added to your Rex!')
+			})
+		}
 	}
 
 
