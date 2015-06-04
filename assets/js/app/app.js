@@ -1,14 +1,5 @@
 var RexApp = angular.module('RexApp', ['ngRoute','ngMaterial', 'ui.bootstrap']);
 
-RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
-
-  console.log('ANGULAR READY')
-
-  // UserService.check(function(err,data){
-  //   console.log('check', err, data);
-  // })
-
-}])
 
 RexApp.controller('sidenavController', function($scope, $mdSidenav) {
   // $scope.openLeftMenu = function() {
@@ -46,12 +37,16 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
     controller: 'homeCtrl'
   })
   .when('/myrex',{
-    templateUrl: '/views/myRex.html',
-    controller:'myRexCtrl'
+    templateUrl: '/views/myList.html',
+    controller:'listCtrl'
   })
   .when('/addrex', {
     templateUrl: '/views/addRex.html',
-    controller: 'addRexCtrl'
+    controller: 'listCtrl'
+  })
+  .when('/locations',{
+    templateUrl:'/views/myrex.html',
+    controller:'myRexCtrl'
   })
   .when('/search', {
     templateUrl:'/views/search.html',
@@ -66,3 +61,12 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
   })
 }])
 
+RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
+
+  console.log('ANGULAR READY')
+
+  UserService.check(function(err,data){
+    console.log('check', err, data);
+  })
+
+}])
