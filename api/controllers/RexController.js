@@ -35,9 +35,9 @@ module.exports = {
 
 		sendgrid.send({
 			to:req.query.to,
-			from:'sendrexgospears@gmail.com',
+			from:'SendRexGoSpears@gmail.com',
 			subject:req.query.subject,
-			text:req.query.text
+			text:req.query.text+' has sent you their Rex for '+req.query.rex
 		}, function(err,json){
 			if(err){
 				return console.error(err);
