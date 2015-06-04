@@ -7,12 +7,12 @@
   </div>
 
   
-    <md-button ng-click="showDialog('signup')" class="md-raised">
+    <md-button ng-show="!currentUser" ng-click="showDialog('signup')" class="md-raised">
       SIGNUP
     </md-button>
   
 
-    <md-button ng-click="showDialog('login')" class="md-raised">
+    <md-button ng-show="!currentUser" ng-click="showDialog('login')" class="md-raised">
       LOGIN
     </md-button>
   
