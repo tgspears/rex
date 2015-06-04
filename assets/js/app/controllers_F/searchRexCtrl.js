@@ -7,9 +7,9 @@ $scope.UserService = UserService;
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
 console.log($scope.currentUser)
-    // if($scope.currenUser==undefined){
-    //   $location.path('/')
-    // }
+    if($scope.currentUser==false){
+      $location.path('/')
+    }
   });
 
 	// $scope.newYelpRex = {

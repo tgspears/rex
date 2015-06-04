@@ -1,4 +1,4 @@
-RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '$mdToast', function($scope, $http,$routeParams,$location,$mdToast){
+RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '$mdToast', 'UserService',function($scope, $http,$routeParams,$location,$mdToast,UserService){
 
 console.log('ADD REX CTRL LOADED!')
 

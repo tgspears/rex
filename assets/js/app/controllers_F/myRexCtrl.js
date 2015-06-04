@@ -1,33 +1,19 @@
-RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', function($scope,$http,$mdToast,$mdDialog){
+RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'UserService', function($scope,$http,$mdToast,$mdDialog,UserService){
 
   console.log("MY REX CTRL LOADED");
-
-  $scope.rexes = []
-
-<<<<<<< HEAD
-  // $scope.sendEmail = function(){
-  //   EmailService.sendEmail('wasd','wasd','wasd');
-  // }
-=======
-  // RexApp.run([function(){
-  // }])
   
-  $scope.showDialog =function($event) {
-       var parentEl = angular.element(document.body);
-       $mdDialog.show({
-         parent: parentEl,
-         targetEvent: $event,
-         templateUrl:'views/addListModal.html',
-         clickOutsideToClose: true,
-         // locals: {
-         //   items: $scope.items
-         // },
-         controller: 'listCtrl'
-      });
+  $scope.UserService = UserService;
+
+
+  $scope.$watchCollection('UserService',function(){
+    $scope.currentUser = UserService.currentUser;
+    console.log($scope.currentUser)
+    if($scope.currentUser==false){
+      $location.path('/')
     }
-  
+  });
 
->>>>>>> cfb6d140ab9ad8963534ab87cc039cb37186491f
+	$scope.rexes = []
 
   $scope.showRex = function(){
     
