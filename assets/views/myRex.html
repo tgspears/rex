@@ -2,34 +2,178 @@
 
 <a class="btn-floating btn-large waves-effect waves-light red" href="/addrex"><i class="mdi-content-add"></i></a>
 
-<ul>
-	<table class="table">
-      <thead>
-        <tr>
-          <th>Rex Name</th>
-          <th>City</th>
-          <th>State/Region</th>
-          <th>Country</th>
-          <th>Notes</th>
-          <th>Edit Rex</th>
-          <th>Delete Rex</th>
-          <th>Send Rex</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr ng-repeat="rex in rexes | filter:{category:'restaurant'}">
-          <td>{{rex.name}}</td>
-          <td>{{rex.city}}</td>
-          <td>{{rex.state}}</td>
-          <td>{{rex.country}}</td>
-          <td>{{rex.notes}}</td>
-          <td><a href="/editrex/{{rex.id}}" class="btn-floating btn-small waves-effect waves-light blue"><i class="mdi-image-edit"></i></a></td>
-          <td><a ng-click="deleteRex(rex.id)" class="btn-floating btn-small waves-effect waves-light red"><i class="mdi-action-delete"></i></a></td>
-          <td><a ng-click="sendEmail()" class="btn-floating btn-small waves-effect waves-light green"><i class="mdi-communication-email"></i></a></td>
-        </tr>
-      </tbody>
-    </table>
 
-    <a ng-click="sendEmail('tg.spears@gmail.com','another test','wasssuuuup')">Trevor</a>
-    <a ng-click="sendEmail('lauren.nicole.go@gmail.com','This is live','Yay we can send emails from heroku!')">Lauren</a>
+
+<ul class="collapsible" data-collapsible="accordian">
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>RESTAURANT</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'restaurant'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+            <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-maps-place"></i>ACCOMMODATIONS</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'accommodations'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-social-whatshot"></i>NATURE - HIKES / VIEWS / OUTDOORS</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'nature'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>SHOPPING</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'shopping'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>LANDMARKS / ATTRACTIONS</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'landmarks'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>EVENTS / FESTIVALS</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'events'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>MUSEUMS</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'museums'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>BARS / NIGHTLIFE</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'nightlife'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>OTHER</div>
+      <div class="collapsible-body">
+        <ul>
+          <li ng-repeat="rex in rexes | filter:{category:'other'}">
+            {{rex.name}}
+            {{rex.street}}
+            {{rex.city}}
+            {{rex.state}}
+            {{rex.country}}
+            {{rex.phone}}
+            {{rex.email}}
+            {{rex.website}}
+            {{rex.notes}}
+             <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+          </li>
+        </ul>
+      </div>
+    </li>
 </ul>
