@@ -3,7 +3,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   console.log("MY REX CTRL LOADED");
   
   $scope.UserService = UserService;
-  $scope.EmailService = EmailService;
+  
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
@@ -14,6 +14,26 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   });
 
 	$scope.rexes = []
+
+
+  $scope.showDialog =function($event) {
+       // var parentEl = angular.element(document.body);
+       $mdDialog.show({
+         // parent: parentEl,
+         // targetEvent: $event,
+         templateUrl:'views/sendEmailModal.html',
+         clickOutsideToClose: true,
+         // locals: {
+         //   items: $scope.items
+         // },
+         controller: 'myRexCtrl'
+      });
+  }
+
+  $scope.closeDialog = function(){
+    console.log('clicked closeDialog()')
+    $mdDialog.hide();
+  }
 
   $scope.showRex = function(){
     console.log($routeParams)
@@ -47,6 +67,10 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   }
 
   $scope.showRex();
+
+  $('.collapsible').collapsible({
+      accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
+  });
 
   $scope.sendEmail = function(to,subject,text){
 
