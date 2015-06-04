@@ -1,0 +1,30 @@
+<md-dialog aria-label="List dialog">
+  <md-dialog-content>
+    <form ng-submit="addList()">
+
+    <div> RECIPIENT EMAIL </div>
+
+      <md-input-container>
+ 
+        <input name="newList" ng-model="newList.title" placeholder="ex. lenny@example.com" required md-maxlength="100" minlength="1">
+      </md-input-container>
+
+      <md-input-container>
+      <label>MESSAGE</label>
+        <input name="newList" ng-model="newList.title" placeholder="ex. Here are my Rex for Seattle!" required md-maxlength="100" minlength="1">
+      </md-input-container>
+
+      <div>
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
+      </div>
+    </form>
+
+  </md-dialog-content>
+
+  <div class="md-actions">
+      <md-button ng-click="closeDialog()" class="md-primary"> 
+                 Close Dialog
+      </md-button>
+  </div>
+
+</md-dialog>
