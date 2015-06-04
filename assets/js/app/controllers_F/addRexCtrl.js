@@ -1,8 +1,9 @@
-RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', function($scope, $http,$routeParams){
+RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams','$location', function($scope, $http,$routeParams,$location){
 
 console.log('ADD REX CTRL LOADED!')
 
 	var id = $routeParams.id
+	$scope.whatMode = "Add"
 
 	if (id){
 		console.log(id)
@@ -14,6 +15,7 @@ console.log('ADD REX CTRL LOADED!')
 		  .error(function(data, status) {
 		      alert("Error",data);
 		});
+		$scope.whatMode = "Edit"
 	}
 
 	$scope.addRex = function(){
@@ -31,8 +33,8 @@ console.log('ADD REX CTRL LOADED!')
 			website:$scope.newRex.website,
 			notes:$scope.newRex.notes
 		}
+
 		if(id){
-			$scope.content = "<p>blah blah</p>";
 			$http.put('/api/rex/'+id, rexInfo)
 			.success(function(data){
 				console.log(data)
