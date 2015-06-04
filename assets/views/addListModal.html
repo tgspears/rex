@@ -1,0 +1,25 @@
+<md-dialog aria-label="List dialog">
+  <md-dialog-content>
+    <form ng-submit="signup()" ng-show="!currentUser">
+
+    <div> NAME YOUR NEW REX </div>
+
+      <md-input-container>
+      <!-- <label>NAME YOUR REX</label> -->
+        <input name="newList" ng-model="newList" placeholder="ex. Seattle or Bloomsbury" required md-maxlength="100" minlength="1">
+      </md-input-container>
+
+      <div>
+        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
+      </div>
+    </form>
+
+  </md-dialog-content>
+
+  <div class="md-actions">
+      <md-button ng-click="closeDialog()" class="md-primary"> 
+                 Close Dialog
+      </md-button>
+  </div>
+
+</md-dialog>

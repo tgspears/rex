@@ -1,4 +1,4 @@
-RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', function($scope,$http,$mdToast){
+RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', function($scope,$http,$mdToast,$mdDialog){
 
 	console.log("MY REX CTRL LOADED");
 
@@ -6,6 +6,22 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', function($scope,$h
 
   // RexApp.run([function(){
   // }])
+  
+  $scope.showDialog =function($event) {
+       var parentEl = angular.element(document.body);
+       $mdDialog.show({
+         parent: parentEl,
+         targetEvent: $event,
+         templateUrl:'views/addListModal.html',
+         clickOutsideToClose: true,
+         // locals: {
+         //   items: $scope.items
+         // },
+         controller: 'listCtrl'
+      });
+    }
+  
+
 
   $scope.showRex = function(){
     
@@ -32,5 +48,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', function($scope,$h
     })
   }
     $scope.showRex();
+
+
 
 }]);
