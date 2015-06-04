@@ -1,3 +1,9 @@
 <div>MY REX</div>
 
 <a class="btn-floating btn-large waves-effect waves-light red" ng-click="showDialog()"><i class="mdi-content-add"></i></a>
+
+<ul>
+	<li ng-repeat="list in lists">
+		<a href = "/list/{{list.id}}" class="eachList">{{list.title}}</a>
+	</li>
+</ul>

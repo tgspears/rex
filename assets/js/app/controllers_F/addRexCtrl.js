@@ -14,6 +14,27 @@ $scope.UserService = UserService;
     }
   });
 
+  $scope.showList = function(){
+
+    console.log($scope.currentUser)
+
+    // console.log("made it into showList")
+    $http({
+      method:'GET',
+      url:'/api/list',
+      params:{
+        userId:UserService.currentUser.id
+      }
+    })
+    .success(function(data, status){
+      $scope.lists = data;
+      console.log('lists',data)
+    })
+    .error(function(data,status){
+      $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
+    })
+  }
+
 	var id = $routeParams.id
 	$scope.whatMode = "Add"
 
@@ -43,7 +64,9 @@ $scope.UserService = UserService;
 			email:$scope.newRex.email,
 			category:$scope.newRex.category,
 			website:$scope.newRex.website,
-			notes:$scope.newRex.notes
+			notes:$scope.newRex.notes,
+			list_id:$scope.newRex.listId
+
 		}
 
 		if(id){
@@ -63,6 +86,8 @@ $scope.UserService = UserService;
 			})
 		}
 	}
+
+	$scope.showList();
 
 }]);
 

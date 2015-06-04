@@ -44,10 +44,10 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
     templateUrl: '/views/addRex.html',
     controller: 'addRexCtrl'
   })
-  .when('/locations',{
-    templateUrl:'/views/myRex.html',
-    controller:'myRexCtrl'
-  })
+  // .when('/locations',{
+  //   templateUrl:'/views/myrex.html',
+  //   controller:'myRexCtrl'
+  // })
   .when('/search', {
     templateUrl:'/views/search.html',
     controller:'searchRexCtrl'
@@ -55,6 +55,10 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
   .when('/editrex/:id',{
     templateUrl:'/views/addRex.html',
     controller:'addRexCtrl'
+  })
+  .when('/list/:id',{
+    templateUrl:'/views/myRex.html',
+    controller:'myRexCtrl'
   })
   .otherwise({
     templateUrl:'/views/404.html'
