@@ -2,6 +2,18 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
 console.log('ADD REX CTRL LOADED!')
 
+	
+$scope.UserService = UserService;
+
+
+  $scope.$watchCollection('UserService',function(){
+    $scope.currentUser = UserService.currentUser;
+		console.log($scope.currentUser)
+    if($scope.currentUser==false){
+      $location.path('/')
+    }
+  });
+
 	var id = $routeParams.id
 	$scope.whatMode = "Add"
 

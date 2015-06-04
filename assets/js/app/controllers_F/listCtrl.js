@@ -50,6 +50,13 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
          controller: 'listCtrl'
       });
     }
+
+  $scope.showList = function(){
+
+    console.log("made it into showList")
+  }
+
+  $scope.showList();
   
 
 
