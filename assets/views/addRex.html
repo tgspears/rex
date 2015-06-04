@@ -4,7 +4,7 @@
 <form ng-submit="addRex()">
   <md-input-container>
     <label>Name: {{rex.name}}</label>
-    <input name="name" ng-model="newRex.name" required md-maxlength=20>
+    <input name="name" ng-model="newRex.name" value="{{rex.name}}" required md-maxlength=20>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -25,7 +25,7 @@
 
   <md-input-container>
     <label>City: {{rex.city}}</label>
-    <input name="city" ng-model="newRex.city" required md-maxlength=20 md-minlength=1>
+    <input name="city" ng-model="newRex.city" value="{{rex.city}}" required md-maxlength=20 md-minlength=1>
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
@@ -78,7 +78,7 @@
   </md-select> -->
 
   <div class="input-field col s12">
-    <select class="browser-default" ng-model="newRex.category">
+    <select class="browser-default" ng-model="newRex.category" value="{{rex.category}}">
       <option value="" disabled selected>SELECT A CATEGORY</option>
       <option value="restaurant">Restaurant</option>
       <option value="accommodations">Accommodations</option>

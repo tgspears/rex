@@ -34,16 +34,31 @@ console.log('ADD REX CTRL LOADED!')
 		if(id){
 			$http.put('/api/rex/'+id, rexInfo)
 			.success(function(data){
+				console.log(data)
 				alert(data.name+' has been edited!')
+				$location.path('/myrex')
 			})
 		}else{
 			$http.post('/api/rex', rexInfo)
 			.success(function(data){
 				alert(data.name+' has been added to your Rex!')
+				$location.path('/myrex')
 			})
 		}
 	}
 
+}]);
 
-
-}])
+RexApp.directive("value", function() {
+    return {
+        priority: 500,
+        require: "?ngModel",
+        link: function(scope, element, attr, ngModel) {
+            if(!ngModel) {
+                return;
+            }
+            var value = attr.value;
+            ngModel.$setViewValue(value);
+        }
+    };
+});
