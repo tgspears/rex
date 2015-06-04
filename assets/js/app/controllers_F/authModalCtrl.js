@@ -1,4 +1,4 @@
-RexApp.controller('authModalCtrl', ['$scope', 'UserService', '$modal', '$http', '$mdDialog', function($scope,UserService,$modal,$http, $mdDialog){
+RexApp.controller('authModalCtrl', ['$scope', 'UserService', '$modal', '$http', '$mdDialog', '$mdToast', function($scope,UserService,$modal,$http, $mdDialog,$mdToast){
   console.log("MY AUTH CTRL LOADED");
 
   $scope.closeDialog = function(){
@@ -9,10 +9,13 @@ RexApp.controller('authModalCtrl', ['$scope', 'UserService', '$modal', '$http', 
     UserService.login($scope.email, $scope.password, function(err,data){
       if(err){
         console.log(err);
-        alert('An error has occurred.');
+        $mdToast.show($mdToast.simple().content('Oops! Invalid login credentials. Please try again.'))
+        $location.path('/')
       } else {
         console.log(data);
-        alert('Invalid authentication credentials. Please try again.');
+        $mdToast.show($mdToast.simple().content('You have been logged in!'))
+        $scope.closeDialog();
+  
       }
     })
   }

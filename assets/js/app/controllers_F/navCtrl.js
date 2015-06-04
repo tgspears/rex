@@ -16,16 +16,6 @@ RexApp.controller('navCtrl', ['$scope', '$rootScope', '$mdSidenav', 'UserService
     $mdSidenav('left').toggle();
   };
 
-   $scope.showSignup = function(){
-    console.log('showSignup')
-    $('#signupModal').openModal();
-  }
-
-  $scope.showLogin = function(){
-    console.log('showLogin')
-    controller:'authModalCtrl';
-    $('#loginModal').openModal();
-  }
 
   $scope.logOut = function(){
     
