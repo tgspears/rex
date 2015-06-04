@@ -12,10 +12,10 @@ module.exports = {
       type:'string',
       required:true
     },
-    description:{
-      type:'text',
-      required:true
-    },
+    // description:{
+    //   type:'text',
+    //   required:true
+    // },
 
     ////////ASSOCIATIONS/////////
 

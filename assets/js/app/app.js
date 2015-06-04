@@ -42,7 +42,7 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
   })
   .when('/addrex', {
     templateUrl: '/views/addRex.html',
-    controller: 'listCtrl'
+    controller: 'addRexCtrl'
   })
   .when('/locations',{
     templateUrl:'/views/myrex.html',

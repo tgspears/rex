@@ -1,12 +1,12 @@
 <md-dialog aria-label="List dialog">
   <md-dialog-content>
-    <form ng-submit="signup()" ng-show="!currentUser">
+    <form ng-submit="addList()">
 
     <div> NAME YOUR NEW REX </div>
 
       <md-input-container>
       <!-- <label>NAME YOUR REX</label> -->
-        <input name="newList" ng-model="newList" placeholder="ex. Seattle or Bloomsbury" required md-maxlength="100" minlength="1">
+        <input name="newList" ng-model="newList.title" placeholder="ex. Seattle or Bloomsbury" required md-maxlength="100" minlength="1">
       </md-input-container>
 
       <div>
