@@ -10,16 +10,13 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'restaurant'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
-            <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
+            <a class="btn-floating btn waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
           </li>
         </ul>
       </div>
@@ -29,15 +26,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'accommodations'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -48,15 +42,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'nature'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -67,15 +58,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'shopping'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -86,15 +74,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'landmarks'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -105,15 +90,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'events'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -124,15 +106,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'museums'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -143,15 +122,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'nightlife'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>
@@ -162,15 +138,12 @@
       <div class="collapsible-body">
         <ul>
           <li ng-repeat="rex in rexes | filter:{category:'other'}">
-            {{rex.name}}
-            {{rex.street}}
-            {{rex.city}}
-            {{rex.state}}
-            {{rex.country}}
-            {{rex.phone}}
-            {{rex.email}}
-            {{rex.website}}
-            {{rex.notes}}
+            <h1>{{rex.name}}</h1>
+            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+            <p>{{rex.phone}}</p>
+            <p>{{rex.email}}</p>
+            <p>{{rex.website}}</p>
+            <p>{{rex.notes}}</p>
              <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-communication-email" ng-click="showDialog()"></i></a>
           </li>
         </ul>

@@ -16,22 +16,17 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
 
 
   $scope.showDialog =function($event) {
-       // var parentEl = angular.element(document.body);
-       $mdDialog.show({
-         // parent: parentEl,
-         // targetEvent: $event,
-         templateUrl:'views/sendEmailModal.html',
-         clickOutsideToClose: true,
-         // locals: {
-         //   items: $scope.items
-         // },
-         controller: 'myRexCtrl'
-      });
-  }
-
-  $scope.closeDialog = function(){
-    console.log('clicked closeDialog()')
-    $mdDialog.hide();
+     // var parentEl = angular.element(document.body);
+     $mdDialog.show({
+       // parent: parentEl,
+       // targetEvent: $event,
+       templateUrl:'views/sendEmailModal.html',
+       clickOutsideToClose: true,
+       locals: {
+         rex: $event
+       },
+       controller: 'sendEmailModalCtrl'
+    });
   }
 
   $scope.showRex = function(){
@@ -70,27 +65,6 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   $('.collapsible').collapsible({
       accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });
-
-  $scope.sendEmail = function(to,subject,text){
-
-    console.log('sendEmail_F')
-    var emailReq = {
-      method: 'GET',
-      url:'/email',
-      params:{
-        to:to,
-        subject:subject,
-        text:text
-      }
-    }
-
-    console.log(emailReq);
-
-    $http(emailReq).success(function(data){
-      console.log(data);
-    })
-
-  }
 
 }]);
 
