@@ -225,7 +225,30 @@ i.mdi-navigation-close {
 	width:100%;
 }
 
+input.search-bar{
+	width:85%;
+	margin:0 auto;
+}
 
+input#searchLocation.search-bar:focus{
+	border:2px solid black;
+	border-radius:5px;
+
+}
+
+input#searchTerm.search-bar:focus{
+	border:2px solid  rgb(45,49,60);
+	border-radius:5px;
+
+}
+
+#search-header{
+	font-size:32px;
+	margin-top:20px;
+	font-weight:200;
+	text-align: center;
+	color:rgb(16,26,89);
+}
 
 
 
@@ -395,12 +418,13 @@ div.rex-name{
 }
 
 .rex-address{
-	margin-left:-140px;
+	margin-left:-120px;
+	width:45%;
 }
 
 .mdi-communication-phone{
-	margin-right:-40px;
-	margin-top:-80px;
+	/*margin-right:-40px;*/
+	/*margin-top:-80px;*/
 	font-size:20px;	
 }
 
@@ -417,7 +441,13 @@ div.rex-name{
 }
 
 .rex-share{
-	margin-bottom:-100px;
+	/*margin-bottom:-100px;*/
+}
+
+.rex-btns{
+	width:100%;
+	margin-bottom:-110px;
+	margin-right:-70px;
 }
 
 

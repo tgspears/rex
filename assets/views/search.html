@@ -1,13 +1,16 @@
 <div>
+
+<div id="search-header">SEARCH LOCATIONS</div>
+
   <form ng-submit="yelpSearch()">
     <div class="input-field">
-      <input id="searchLocation" type="search" ng-model="searchLocation" required>
-      <label for="search"><i class="mdi-action-search"></i></label>
+      <input style="width:85%" class="search-bar" id="searchLocation" type="search" ng-model="searchLocation" required>
+      <label for="search"><i class="mdi-action-search"></i>ENTER A PLACE</label>
       <i class="mdi-navigation-close"></i>
     </div>
     <div class="input-field">
-      <input style="background-color:#AAA" id="searchTerm" type="search" ng-model="searchTerm" required>
-      <label for="search"><i class="mdi-action-search"></i></label>
+      <input style="width:85%" class="search-bar" id="searchTerm" type="search" ng-model="searchTerm" required>
+      <label for="search"><i class="mdi-action-search"></i>ENTER A SEARCH TERM</label>
       <i class="mdi-navigation-close"></i>
     </div>
     <div>
