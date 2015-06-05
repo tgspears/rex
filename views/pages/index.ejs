@@ -8,13 +8,14 @@
       <a ng-click="closeLeftMenu()" class="nav-links waves-effect waves-purple btn-flat" href = "/addrex">ADD REX</a><br>
       <a ng-click="closeLeftMenu()" class="nav-links waves-effect waves-purple btn-flat" href = "/search">SEARCH</a><br>
       <!-- <a ng-click="closeLeftMenu()" class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a> -->
-      <a ng-show="currentUser" class="waves-effect waves-light btn-flat" aria-label ng-click="logOut()">LOGOUT</a>
+      <a ng-show="currentUser" class="nav-links waves-effect waves-purple btn-flat" aria-label ng-click="logOut()">LOGOUT</a>
     </md-sidenav>
   <md-content>
 
     <md-button aria-label="side-nav" ng-click="openLeftMenu()">
       <i class="mdi-navigation-menu"></i>
     </md-button>
+    <div id="hello-user" ng-show="currentUser">Welcome, {{currentUser.username}}</div>
   </md-content>
 
   </div>
