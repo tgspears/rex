@@ -1,161 +1,165 @@
-<div>MY {{list.title}} REX</div>
-
-<a class="btn-floating btn waves-effect waves-light red" href="/addrex"><i class="mdi-content-add"></i></a>
-
+<div id="rex-show-body">
+    <div id="location-header">{{listData.title}} <span><a style="margin-top:-10px" class="btn-floating btn waves-effect waves-light purple lighten-1" href="/addrex"><i class="mdi-content-add"></i></a></span> </div>
 
 
-<ul class="collapsible" data-collapsible="accordian">
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>RESTAURANT</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'restaurant'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-maps-place"></i>ACCOMMODATIONS</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'accommodations'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-social-whatshot"></i>NATURE - HIKES / VIEWS / OUTDOORS</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'nature'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>SHOPPING</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'shopping'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>LANDMARKS / ATTRACTIONS</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'landmarks'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>EVENTS / FESTIVALS</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'events'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>MUSEUMS</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'museums'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>BARS / NIGHTLIFE</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'nightlife'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-    <li>
-      <div class="collapsible-header"><i class="mdi-image-filter-drama"></i>OTHER</div>
-      <div class="collapsible-body">
-        <ul>
-          <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'other'}">
-            <h1>{{rex.name}}</h1>
-            <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-            <p>{{rex.phone}}</p>
-            <p>{{rex.email}}</p>
-            <p>{{rex.website}}</p>
-            <p>{{rex.notes}}</p>
-            <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-            <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
-          </li>
-        </ul>
-      </div>
-    </li>
-</ul>
+    <ul class="collapsible" data-collapsible="accordian">
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-maps-local-restaurant"></i>RESTAURANT</div>
+          <div class="collapsible-body">
+            <ul>
+              <!-- <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'restaurant'}"> -->
+                <md-whiteframe ng-repeat="rex in rexes | filter:{category:'restaurant'}" class="md-whiteframe-z2" layout layout-align="center center">
+                
+                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <!-- <div>{{rex.email}}</div> -->
+                <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                <!-- <div>{{rex.notes}}</div> -->
+                <a href="tel:{{rex.phone}}" class="rex-phone"><i class="btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light blue mdi-editor-mode-edit"></i></a>
+                <a class="rex-share"><i class="btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+
+                </md-whiteframe>
+              
+              <!-- </li> -->
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-maps-local-hotel"></i>ACCOMMODATIONS</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'accommodations'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-maps-local-florist"></i>NATURE - HIKES / VIEWS / OUTDOORS</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'nature'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-maps-store-mall-directory"></i>SHOPPING</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'shopping'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-action-stars"></i>LANDMARKS / ATTRACTIONS</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'landmarks'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-maps-local-attraction"></i>EVENTS / FESTIVALS</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'events'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-image-collections"></i>MUSEUMS</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'museums'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="collapsible-header"><i class="rex-icon mdi-maps-local-bar"></i>BARS / NIGHTLIFE</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'nightlife'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li>
+          <div class="header-title collapsible-header"><i class="rex-icon mdi-action-room"></i>OTHER</div>
+          <div class="collapsible-body">
+            <ul>
+              <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'other'}">
+                <h1>{{rex.name}}</h1>
+                <span>{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                <p>{{rex.phone}}</p>
+                <p>{{rex.email}}</p>
+                <p>{{rex.website}}</p>
+                <p>{{rex.notes}}</p>
+                <a class="btn-floating btn waves-effect waves-light green"><i class="mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                <a class="btn-floating btn waves-effect waves-light blue" href="/editrex/{{rex.id}}"><i class="mdi-editor-mode-edit"></i></a>
+              </li>
+            </ul>
+          </div>
+        </li>
+    </ul>
+</div>

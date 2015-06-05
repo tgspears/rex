@@ -30,7 +30,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   }
 
   $scope.showRex = function(){
-    console.log($routeParams)
+    console.log('ROUTE'+$routeParams)
     $http({
       method : 'GET',
       url : '/api/rex',
@@ -47,6 +47,25 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
     });
   }
 
+  $scope.listInfo = function(){
+    $http({
+      method:'GET',
+      url:'/api/list',
+      params:{
+        id:$routeParams.id
+      }
+    })
+    .success(function(data,status){
+      $scope.listData = data;
+      console.log('LIST',data)
+    })
+    .error(function(data,status){
+      alert("error")
+    })
+  }
+
+
+
   $scope.deleteRex = function(idx){
     $http.delete('/api/rex/'+idx)
     .success(function(data,status){
@@ -61,6 +80,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   }
 
   $scope.showRex();
+  $scope.listInfo();
 
   $('.collapsible').collapsible({
       accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
