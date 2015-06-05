@@ -82,7 +82,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			$http.post('/api/rex', rexInfo)
 			.success(function(data){
 				// alert(data.name+' has been added to your Rex!')
-				$mdToast.show($mdToast.simple().content(data.name+'has been added to your Rex!'))
+				$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
 				$location.path('/myrex')
 			})
 		}
