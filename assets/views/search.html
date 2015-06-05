@@ -5,14 +5,14 @@
   <form ng-submit="yelpSearch()" id="search-form">
     <!-- <div class="input-field"> -->
     <md input-container>
-      <label><i class="mdi-action-search"></i></label>
+      <label><i class="mdi-action-search"></i>SEARCH LOCATION</label>
       <input style="width:85%" class="search-bar" id="searchLocation" placeholder="ENTER A PLACE" type="search" ng-model="searchLocation" required>
     </md input-container><br><br>
       <!-- <i class="mdi-navigation-close"></i> -->
     <!-- </div> -->
     <!-- <div class="input-field"> -->
     <md input-container>
-      <label for="search"><i class="mdi-action-search"></i></label>
+      <label for="search"><i class="mdi-action-search"></i>SEARCH TERM</label>
       <input style="width:85%" class="search-bar" id="searchTerm" placeholder="ENTER A SEARCH TERM" type="search" ng-model="searchTerm" required>
       <!-- <i class="mdi-navigation-close"></i> -->
     <!-- </div> -->
@@ -32,29 +32,33 @@
                   <img class="activator" src={{result.image_url}}>
                 </div>
                 <div class="card-content">
-                  <span class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
-                  <p>{{result.rating}}|{{result.review_count}}</p>
+                  <span style="font-size:20px" class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
+                  <p>{{result.rating}} <i class="mdi-action-grade"></i>|{{result.review_count}} REVIEWS</p>
 
                   <!-- Hidden form for passing data -->
                     <form ng-submit="addYelpRex($index)">
                         
-                        <button class="btn-floating btn-large waves-effect waves-light red" type="submit"><i class="mdi-content-add"></i></button>
+                        <button class="add-rex-plus btn-floating btn-large waves-effect waves-light purple lighten-1" type="submit"><i class="mdi-content-add"></i></button>
 
                     </form>
 
                 </div>
                 <div class="card-reveal">
-                  <span class="card-title grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-close right"></i></span>
+                  
+                      <a href="{{result.url}}"><span class="card-title grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-close right"></i></span></a>
                   <p>
-                      {{result.name}}
-                      {{result.display_phone}}
-                      {{result.url}}
-                      {{result.rating}}
-                      {{result.review_count}}
-                      {{result.location.address}}
+                      
+                        <a href="tel:{{result.display_phone}}" class="rex-phone"><i class="indigo darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+
+
+                      
+                      <!-- {{result.rating}} -->
+                      <!-- {{result.review_count}} -->
+                      <span class="result-address">{{result.location.address[0]}} {{result.location.city}},{{result.location.state_code}},{{result.location.country_code}}</span>
+                     <!--  {{result.location.address}}
                       {{result.location.city}}
                       {{result.location.state_code}}
-                      {{result.location.country_code}}
+                      {{result.location.country_code}} -->
                   </p>
                 </div>
         </div>

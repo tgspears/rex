@@ -53,7 +53,7 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 
    	var newYelpRex = {
 			name:$scope.results[idx].name,
-			street:$scope.results[idx].location.address[idx],
+			street:$scope.results[idx].location.address[0],
 			city:$scope.results[idx].location.city,
 			state:$scope.results[idx].location.state_code,
 			country:$scope.results[idx].location.country_code,
