@@ -36,7 +36,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
   }
 
 	var id = $routeParams.id
-	$scope.whatMode = "Add"
+	$scope.whatMode = "ADD"
 
 	if (id){
 		console.log(id)
@@ -48,7 +48,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 		  .error(function(data, status) {
 		      alert("Error in get method",data);
 		});
-		$scope.whatMode = "Edit"
+		$scope.whatMode = "EDIT"
 	}
 
 	$scope.addRex = function(){
