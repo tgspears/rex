@@ -140,6 +140,58 @@ button.md-raised.home-btns.md-button{
 }
 
 
+/*COLORS*/
+
+/*DARK BLUE: rgb(16,26,89) or indigo darken-4 (not quite)
+YELLOW: rgb(255,241,94) OR yellow lighten-2
+GRAY: rgb(45,49,60) OR grey darken-4
+WHITE: 
+PURPLE:rgb(148,36,159) purple lighten-1;
+*/
+
+
+/*HOME PAGE MODALS*/
+
+md-input-container.md-default-theme .md-input {
+	border-color: rgb(45,49,60);
+}
+
+md-input-container.md-default-theme.md-input-valid .md-input {
+	border-color: rgb(16,26,89);
+}
+
+md-input-container.md-default-theme.md-input-invalid .md-input {
+	border-color: rgb(148,36,159);
+}																																														
+
+md-input-container.md-default-theme label {
+	color: rgb(45,49,60);
+}
+
+md-input-container.md-default-theme.md-input-valid label {
+	color: rgb(16,26,89);
+}
+
+md-input-container.md-default-theme.md-input-invalid label {
+	color: rgb(148,36,159);
+}
+
+.modalHeader {
+	font-size: 30px;
+}
+
+i.mdi-navigation-close {
+	color: rgb(148,36,159);
+	font-size: 30px;
+	position: relative;
+	left: 25%;
+	top: 2px;
+}
+
+.modalButton {
+	color: white;
+}
+
 /*SEARCH RESULT PAGE*/
 .card.small .card-image{
 	height:250px;

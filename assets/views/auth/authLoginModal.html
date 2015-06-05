@@ -1,25 +1,27 @@
-    <md-dialog>
+<md-dialog aria-label="List dialog">
+  <md-dialog-content>
     <form ng-submit="login()" ng-show="!currentUser">
-        <h4>LOGIN</h4>
-           <md-input-container>
-            <label>Email</label>
-            <input name="email" ng-model="email" required md-maxlength="20" minlength="4">
+      <div class="modalHeader"> LOGIN <a ng-click="closeDialog()"><i class="mdi-navigation-close"></i></a></div>
+      <md-input-container>
+        <label>Email</label>
+        <input name="email" ng-model="email" required type="email">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
           <div ng-message="minlength">That's too short!</div>
         </div> -->
-           </md-input-container>
+      </md-input-container>
 
-          <md-input-container>
-            <label>Password</label>
-            <input name="password" ng-model="password" required md-maxlength="20" minlength="4" type="password">
-            <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-              <div ng-message="required">This is required!</div>
-              <div ng-message="md-maxlength">That's too long!</div>
-              <div ng-message="minlength">That's too short!</div>
-            </div> -->
-          </md-input-container>
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="LOGIN">
-        </form>
-    </md-dialog>
+      <md-input-container>
+        <label>Password</label>
+        <input name="password" ng-model="password" required type="password">
+        <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+          <div ng-message="required">This is required!</div>
+          <div ng-message="md-maxlength">That's too long!</div>
+          <div ng-message="minlength">That's too short!</div>
+        </div> -->
+      </md-input-container>
+      <input type="submit" class="modalButton md-raised home-btns purple lighten-1 modal-action modal-close waves-effect waves-green btn-flat" value="LOGIN">
+    </form>
+  </md-dialog-content>
+</md-dialog>

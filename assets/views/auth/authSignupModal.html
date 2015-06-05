@@ -2,10 +2,10 @@
   <md-dialog-content>
     <form ng-submit="signup()" ng-show="!currentUser">
 
-    <div> SIGNUP </div>
+    <div class="modalHeader"> SIGNUP <a ng-click="closeDialog()"><i class="mdi-navigation-close"></i></a></div>
       <md-input-container>
         <label>Username</label>
-        <input name="username" ng-model="newUser.username" required md-maxlength="20" minlength="4">
+        <input name="username" ng-model="newUser.username" required minlength="6">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -15,7 +15,7 @@
 
       <md-input-container>
         <label>Email</label>
-        <input name="email" ng-model="newUser.email" required md-maxlength="20" minlength="4">
+        <input name="email" ng-model="newUser.email" required type="email">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -25,7 +25,7 @@
 
       <md-input-container>
         <label>Password</label>
-        <input name="password" ng-model="newUser.password" required md-maxlength="20" minlength="4" type="password">
+        <input name="password" ng-model="newUser.password" required type="password">
         <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
           <div ng-message="required">This is required!</div>
           <div ng-message="md-maxlength">That's too long!</div>
@@ -34,16 +34,10 @@
       </md-input-container>
 
       <div>
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
+        <input type="submit" class="modalButton md-raised home-btns purple lighten-1 modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
       </div>
     </form>
 
   </md-dialog-content>
-
-  <div class="md-actions">
-      <md-button ng-click="closeDialog()" class="md-primary"> 
-                 Close Dialog
-      </md-button>
-  </div>
 
 </md-dialog>
