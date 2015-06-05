@@ -297,7 +297,10 @@ input#searchTerm.search-bar:focus{
 
 }
 
-
+#stubborn {
+	position:relative;
+	bottom: 9px;
+}
 
 #listoflists{
 	width:60%;
