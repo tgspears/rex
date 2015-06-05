@@ -4,18 +4,22 @@ RexApp.controller('navCtrl', ['$scope', '$rootScope', '$mdSidenav', 'UserService
 
   $scope.UserService = UserService;
   $scope.$watchCollection('UserService',function(){
-          $scope.currentUser = UserService.currentUser;
-          
-    
-      console.log('NAV LOG'+UserService.currentUser)
-    })
+    $scope.currentUser = UserService.currentUser;
+    console.log('NAV LOG'+UserService.currentUser)
+  })
 
 
-   $scope.openLeftMenu = function() {
+  $scope.openLeftMenu = function() {
     console.log("MENU FIRING")
     $mdSidenav('left').toggle();
   };
 
+  $scope.closeLeftMenu = function() {
+    if(!$scope.currentUser){
+      $mdToast.show($mdToast.simple().content('Log in or sign up to become awesome!'));
+    }
+    $mdSidenav('left').toggle();
+  };
 
   $scope.logOut = function(){
     
@@ -24,7 +28,7 @@ RexApp.controller('navCtrl', ['$scope', '$rootScope', '$mdSidenav', 'UserService
       $mdToast.show($mdToast.simple().content('You have been logged out!'));
       console.log('LOGGED OUT')
     })
-    // confirm('This will log you out');
+    $scope.closeLeftMenu();
   }
 
   $scope.showMyRex = function(){

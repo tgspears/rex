@@ -40,7 +40,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
 	if (id){
 		console.log(id)
-		$http({method : 'GET',url : '/api/rex/'+id})
+		$http({method:'GET',url:'/api/rex/'+id})
 		  .success(function(data, status) {
 		      $scope.rex = data;
 		      console.log('data',data)
