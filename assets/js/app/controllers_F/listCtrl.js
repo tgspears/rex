@@ -32,6 +32,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
       $scope.closeDialog();
     })
+      $showList();
 
     console.log(newList)
 
