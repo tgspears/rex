@@ -352,6 +352,16 @@ a.eachList {
 	font-size:10px;
 }
 
+a.add-search-btn.md-raised.indigo.darken-4.md-button.md-default-theme{
+	color:white;
+}
+
+a.add-search-btn{
+	/*left:21%;*/
+	width:100%;
+	right:2.5%;
+}
+
 
 /*ADD A REX*/
 
@@ -372,8 +382,15 @@ a.eachList {
 #addARexTitle {
 	font-size: 40px;
 	font-weight: 200;
-	margin-top: 20px;
+	margin-top: 5px;
 	text-align: center;
+}
+
+#or{
+	font-size:25px;
+	font-weight:200;
+	text-align:center;
+	margin-top:10px;
 }
 
 /*REX SHOW PAGE*/
