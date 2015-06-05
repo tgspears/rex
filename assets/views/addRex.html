@@ -5,7 +5,7 @@
 
 
   <div class="input-field col s12">
-    <select class="browser-default" ng-model="newRex.listId" value="{{rex.list_id}}">
+    <select id="rexSelect" class="browser-default" ng-model="newRex.listId" value="{{rex.list_id}}">
       <option value="" required disabled selected>SELECT A REX TO ADD THIS LOCATION TO</option>
       <option ng-repeat="list in lists" value="{{list.id}}">{{list.title}}</option>
      

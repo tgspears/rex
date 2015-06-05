@@ -1,9 +1,9 @@
 RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '$mdToast', 'UserService',function($scope, $http,$routeParams,$location,$mdToast,UserService){
 
-console.log('ADD REX CTRL LOADED!')
+	console.log('ADD REX CTRL LOADED!')
 
-	
-$scope.UserService = UserService;
+		
+	$scope.UserService = UserService;
 
 
   $scope.$watchCollection('UserService',function(){
@@ -46,7 +46,7 @@ $scope.UserService = UserService;
 		      console.log('data',data)
 		   })
 		  .error(function(data, status) {
-		      alert("Error",data);
+		      alert("Error in get method",data);
 		});
 		$scope.whatMode = "Edit"
 	}

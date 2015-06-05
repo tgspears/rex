@@ -8,6 +8,12 @@ WHITE:
 PURPLE:rgb(148,36,159) purple lighten-1;
 */
 
+/*Trevor added*/
+#rexSelect {
+	background: rgb(16,26,89);
+	color: white;
+}
+
 /*GENERAL*/
 body {
 	font-family: 'Exo 2', sans-serif;
