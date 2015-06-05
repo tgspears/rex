@@ -1,9 +1,16 @@
-<div>MY REX</div>
+<div id="myrex-body">
+	<div id="myrex-header">MY REX</div>
 
-<a class="btn-floating btn-large waves-effect waves-light red" ng-click="showDialog()"><i class="mdi-content-add"></i></a>
+	<a class="btn-floating btn-large waves-effect waves-light purple lighten-1" ng-click="showDialog()"><i class="mdi-content-add"></i></a>
 
-<ul>
-	<li ng-repeat="list in lists">
-		<a href = "/list/{{list.id}}" class="eachList">{{list.title}}</a>
-	</li>
-</ul>
+
+
+	<ul id="listoflists">
+		<md-button ng-repeat="list in lists" href = "/list/{{list.id}}" class="eachList btn-flat">
+			<li class="eachli md-raised">
+			{{list.title}}
+			</li>
+		</md-button>
+		</a>
+	</ul>
+</div>

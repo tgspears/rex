@@ -2,7 +2,6 @@
 
 /*DARK BLUE: rgb(16,26,89) or indigo darken-4 (not quite)
 YELLOW: rgb(255,241,94) OR yellow lighten-2
-GREEN: rgb(93,198,67) OR light-green accent-4
 GRAY: rgb(45,49,60) OR grey darken-4
 WHITE: 
 PURPLE:rgb(148,36,159) purple lighten-1;
@@ -51,7 +50,21 @@ img#nav-logo{
 	/*text-shadow:1px 1px white;*/
 }
 
+.mdi-navigation-menu{
+	color:rgb(148,36,159);
+	font-size:22px;
+}
+
+#hello-user{
+	color:rgb(148,36,159);
+	font-size:18px;
+	text-transform:uppercase;
+	float:right;
+	margin-top:4.5%;
+}
+
 /*HOME PAGE*/
+
 
 
 
@@ -60,6 +73,9 @@ img#nav-logo{
 	/*background-color:white;*/
 	height:100vh;
 }
+
+
+
 
 #home-graphic{
 	/*min-width:100px;*/
@@ -98,6 +114,7 @@ img#nav-logo{
 	margin-left:40%;
 }
 
+
 .home-btns{
 	width:100%;
 
@@ -106,6 +123,19 @@ img#nav-logo{
 button.md-raised.home-btns.md-button{
 	/*background-color:rgb(93,198,67);*/
 	color:white;
+
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	#buttons{
+	width:19%;
+	margin-left:34%;
+	}
+
+	.eachli{
+		font-size:20px;
+	}
 
 }
 
@@ -130,5 +160,57 @@ button.md-raised.home-btns.md-button{
 .btn-flat{
 	width:100%;
 }
+
+
+
+
+
+/*MY LIST*/
+
+#myrex-body{
+	height:100vh;
+	background-color:rgb(16,26,89);
+
+}
+#myrex-header{
+	padding-top:40px;
+	font-size:50px;
+	text-align:center;
+	color:white;
+
+}
+
+#listoflists{
+	width:60%;
+	text-align:center;
+	margin:0 auto;
+	margin-top:40px;
+	font-size:26px;
+	text-transform:uppercase;
+	text-decoration:none;
+	color:white;
+
+}
+
+a.eachList {
+	color:white;
+	text-shadow:1px 1px 1px rgb(45,49,60);
+
+}
+
+.eachli{
+	margin-bottom:10px;
+	background-color:rgb(148,36,159);
+	font-size:25px;
+	border-radius:5px;
+}
+
+.eachList:hover{
+	color:rgb(16,26,89);
+	text-shadow: 1px 1px 1px rgb(45,49,60);
+	background-color:white;
+}
+
+
 
 
