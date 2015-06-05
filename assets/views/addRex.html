@@ -6,7 +6,7 @@
 
     <div class="input-field col s12">
       <select class="rexSelect browser-default" ng-model="newRex.listId" value="{{rex.list_id}}">
-        <option value="{{rex.list_id}}" required disabled selected>SELECT THIS REX'S LIST</option>
+        <option value="{{rex.list_id}}" required disabled selected>SELECT A REX LIST</option>
         <option ng-repeat="list in lists" value="{{list.id}}">{{list.title}}</option>
        
       </select>
