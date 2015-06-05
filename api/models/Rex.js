@@ -33,11 +33,11 @@ module.exports = {
       required:false
     },
     phone:{
-      type:'integer',
+      type:'string',
       required:false,
     },
     website:{
-      type:'url',
+      type:'string',
       required:false
     },
     email:{

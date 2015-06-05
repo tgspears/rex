@@ -6,7 +6,7 @@
 
   <div class="input-field col s12">
     <select class="browser-default" ng-model="newRex.listId" value="{{rex.list_id}}">
-      <option value="" disabled selected>SELECT A REX TO ADD THIS LOCATION TO</option>
+      <option value="" required disabled selected>SELECT A REX TO ADD THIS LOCATION TO</option>
       <option ng-repeat="list in lists" value="{{list.id}}">{{list.title}}</option>
      
     </select>
@@ -95,7 +95,7 @@
 
   <md-input-container>
     <label>Email: {{rex.email}}</label>
-    <input name="email" ng-model="newRex.email">
+    <input name="email" type="email" ng-model="newRex.email">
     <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
       <div ng-message="required">This is required!</div>
       <div ng-message="md-maxlength">That's too long!</div>
