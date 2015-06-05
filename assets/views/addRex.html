@@ -6,7 +6,7 @@
 
     <div class="input-field col s12">
       <select class="rexSelect browser-default" ng-model="newRex.listId" value="{{rex.list_id}}">
-        <option value="" required disabled selected>SELECT A REX TO ADD THIS LOCATION TO</option>
+        <option value="{{rex.list_id}}" required disabled selected>{{rex.name}}: SELECT A REX TO ADD THIS LOCATION TO</option>
         <option ng-repeat="list in lists" value="{{list.id}}">{{list.title}}</option>
        
       </select>
@@ -55,7 +55,7 @@
 
     <md-input-container>
       <label>Country: {{rex.country}}</label>
-      <input name="country" ng-model="newRex.country">
+      <input name="country" required ng-model="newRex.country">
       <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
         <div ng-message="required">This is required!</div>
         <div ng-message="md-maxlength">That's too long!</div>
@@ -65,7 +65,7 @@
 
     <div class="input-field col s12">
       <select class="rexSelect browser-default" ng-model="newRex.category" value="{{rex.category}}">
-        <option value="" disabled selected>SELECT A CATEGORY</option>
+        <option value="" disabled selected>{{rex.category}}: SELECT A CATEGORY</option>
         <option value="restaurant">Restaurant</option>
         <option value="accommodations">Accommodations</option>
         <option value="nature">Nature - Hikes/Views/Outdoors</option>

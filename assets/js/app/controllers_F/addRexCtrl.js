@@ -66,8 +66,9 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			website:$scope.newRex.website,
 			notes:$scope.newRex.notes,
 			list_id:$scope.newRex.listId
-
 		}
+
+		console.log('rexInfo: '+rexInfo[0])
 
 		if(id){
 			$http.put('/api/rex/'+id, rexInfo)

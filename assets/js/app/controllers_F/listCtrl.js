@@ -3,6 +3,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
 	console.log("LIST CTRL UP AND RUNNING!")
 
 	$scope.UserService = UserService;
+  $scope.lists = [];
 
 
   $scope.$watchCollection('UserService',function(){
