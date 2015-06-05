@@ -2,39 +2,30 @@
 
 <div id="search-header">SEARCH LOCATIONS</div>
 
-  <form ng-submit="yelpSearch()">
-    <div class="input-field">
-      <input style="width:85%" class="search-bar" id="searchLocation" type="search" ng-model="searchLocation" required>
-      <label for="search"><i class="mdi-action-search"></i>ENTER A PLACE</label>
-      <i class="mdi-navigation-close"></i>
-    </div>
-    <div class="input-field">
-      <input style="width:85%" class="search-bar" id="searchTerm" type="search" ng-model="searchTerm" required>
-      <label for="search"><i class="mdi-action-search"></i>ENTER A SEARCH TERM</label>
-      <i class="mdi-navigation-close"></i>
-    </div>
+  <form ng-submit="yelpSearch()" id="search-form">
+    <!-- <div class="input-field"> -->
+    <md input-container>
+      <label><i class="mdi-action-search"></i></label>
+      <input style="width:85%" class="search-bar" id="searchLocation" placeholder="ENTER A PLACE" type="search" ng-model="searchLocation" required>
+    </md input-container><br><br>
+      <!-- <i class="mdi-navigation-close"></i> -->
+    <!-- </div> -->
+    <!-- <div class="input-field"> -->
+    <md input-container>
+      <label for="search"><i class="mdi-action-search"></i></label>
+      <input style="width:85%" class="search-bar" id="searchTerm" placeholder="ENTER A SEARCH TERM" type="search" ng-model="searchTerm" required>
+      <!-- <i class="mdi-navigation-close"></i> -->
+    <!-- </div> -->
+    </md>
     <div>
-      <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
+      <input type="submit" class="modal-action modal-close md-raised waves-effect btn-flat waves-white purple lighten-1 search-btn" value="SEARCH">
     </div>
   </form>
 </div>
 
-<!-- <ul>
 
-{{total}} RESULTS FOUND
-<li ng-repeat="result in results">
-  {{result.name}}
-  {{result.display_phone}}
-  {{result.rating}}
-  {{result.review_count}}
-  <img src={{result.image_url}}>
-  {{result.location.display_address}}
-
-</li>
-</ul>
- -->
 <ul>
-  {{total}} RESULTS FOUND
+
     <li ng-repeat="result in results">
         <div class="card small">
                 <div class="card-image waves-effect waves-block waves-light">
