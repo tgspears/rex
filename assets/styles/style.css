@@ -260,11 +260,12 @@ input#searchTerm.search-bar:focus{
 }
 
 #search-header{
-	font-size:32px;
+	font-size:40px;
 	margin-top:20px;
 	font-weight:200;
 	text-align: center;
 	color:rgb(16,26,89);
+	margin-bottom:20px;
 }
 
 #search-form{
@@ -272,10 +273,15 @@ input#searchTerm.search-bar:focus{
 }
 
 .search-btn{
-	/*margin-left:0;*/
+	
 	width:50%;
 	margin-left:20%;
-	margin-top:10px;
+	margin-top:20px;
+	/*color:white;*/
+}
+
+.search-btn span{
+	color:white;
 }
 
 .result-address{
@@ -284,6 +290,8 @@ input#searchTerm.search-bar:focus{
 	margin-top:40px;
 	margin-left:60px;
 }
+
+
 /*MY LIST*/
 
 #myrex-body{
@@ -300,41 +308,66 @@ input#searchTerm.search-bar:focus{
 
 }
 
-#stubborn {
+#stubborn{
 	position:relative;
-	bottom: 9px;
+	bottom:9px;
 }
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	#stubborn {
+		position:relative;
+		bottom: 9px;
+	}
+}
+
+
 
 #listoflists{
 	width:60%;
 	text-align:center;
 	margin:0 auto;
 	margin-top:40px;
-	font-size:26px;
 	text-transform:uppercase;
 	text-decoration:none;
 	color:white;
 	border:2px solid white;
 	border-radius:5px;
-	padding-top:20px;
-	padding-bottom:20px;
-	/*padding-right:10px;*/
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height:400px;
+	padding-right:10px;
 
 }
 
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	#listoflists{
+		width:85%;
+		}
+}
+
+.btn-stubborn{
+	margin-top:-10px;
+	margin-left:5px;
+}
+
 a.eachList {
+	font-size:28px;
 	color:white;
 	text-shadow:1px 1px 1px rgb(45,49,60);
 	font-weight:200;
+	background-color:rgb(148,36,159);
 
 
 }
 
 .eachli{
 	margin-bottom:10px;
-	background-color:rgb(148,36,159);
 	font-size:25px;
 	border-radius:5px;
+	padding-top:20px;
+	padding-bottom:20px;
+	padding-right:5px;
 }
 
 .eachList:hover{
@@ -454,12 +487,13 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	width:90%;
 	margin-left:5%;
 	min-height:200px;
+	position:relative;
 }
 
 .rex-name{
-	font-size:18px;
-	margin-top:-85px;
-	margin-left:10px;
+	font-size:25px;
+	/*margin-top:-85px;*/
+	/*margin-left:10px;*/
 	text-decoration:none;
 	color:rgb(16,26,89);
 }
@@ -469,13 +503,14 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 }
 
 div.rex-name{
-	width:200px;
+	/*width:200px;*/
 
 }
 
 .rex-address{
-	margin-left:-120px;
-	width:45%;
+	/*margin-left:-120px;
+	width:45%;*/
+	font-size:18px;
 }
 
 .mdi-communication-phone{
@@ -501,9 +536,51 @@ div.rex-name{
 }
 
 .rex-btns{
-	width:100%;
-	margin-bottom:-110px;
-	margin-right:-70px;
+	
+	margin-left:80%;
+	width:40%;
+	margin-top:1%;
 }
+
+.rex-div{
+	position:absolute;
+	width:90%;
+	margin-left:-42%;
+	margin-top:2%;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	.rex-btns{
+		
+		margin-top:20px;
+		margin-left:47%;
+		width:50%;
+	}
+
+
+	div.rex-name{
+		/*width:200px;*/
+
+	}
+
+	.rex-name{
+		font-size:18px;
+		
+	}
+
+	.rex-div{
+	width:90%;
+	margin-left:-42%;
+	margin-top:4%;
+		
+	}
+
+	.rex-address{
+		font-size:17px;
+	}
+}
+
+
 
 
