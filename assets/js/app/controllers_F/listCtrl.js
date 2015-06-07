@@ -1,6 +1,6 @@
 RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location', '$mdToast', '$http', '$routeParams',function($mdDialog,$scope,UserService,$location,$mdToast,$http){
 
-	console.log("LIST CTRL UP AND RUNNING!")
+	// console.log("LIST CTRL UP AND RUNNING!")
 
 	$scope.UserService = UserService;
   $scope.lists = [];
@@ -8,20 +8,20 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-		console.log($scope.currentUser)
+		// console.log($scope.currentUser)
     if($scope.currentUser==false){
       $location.path('/')
     }
   });
 
    $scope.closeDialog = function(){
-    console.log('clicked closeDialog()')
+    // console.log('clicked closeDialog()')
     $mdDialog.hide();
   }
 
   $scope.showList = function(){
 
-    console.log($scope.currentUser)
+    // console.log($scope.currentUser)
 
     // console.log("made it into showList")
     $http({
@@ -33,7 +33,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
     })
     .success(function(data, status){
       $scope.lists = data;
-      console.log('lists',data)
+      // console.log('lists',data)
     })
     .error(function(data,status){
       $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
@@ -41,7 +41,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
   }
 
   $scope.addList = function(){
-    console.log("LIST ADD FUNCTION REACHED.")
+    // console.log("LIST ADD FUNCTION REACHED.")
 
     var newList = {
       title:$scope.newList.title,
@@ -51,7 +51,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
     $http.post('/api/list', newList)
     .success(function(data){
       $scope.lists.push(data)
-      console.log("Data HERE", $scope.lists)
+      // console.log("Data HERE", $scope.lists)
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
       $scope.closeDialog();
       // $scope.$apply();
@@ -60,7 +60,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
       
     })
     
-    console.log(newList)
+    // console.log(newList)
 
 
   }
@@ -99,7 +99,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
   //     $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
   //   })
   // }
-  console.log("Show List function about to get called")
+  // console.log("Show List function about to get called")
   $scope.showList();
 
 }])

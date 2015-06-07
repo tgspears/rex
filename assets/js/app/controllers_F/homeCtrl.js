@@ -3,22 +3,20 @@ RexApp.controller('homeCtrl', ['$scope', '$http', 'UserService', '$mdToast', '$m
 
 $scope.UserService = UserService;
   $scope.$watchCollection('UserService',function(){
-          $scope.currentUser = UserService.currentUser;
-          
-    
-      console.log('HOME LOG'+UserService.currentUser)
-    })
+    $scope.currentUser = UserService.currentUser;
+    // console.log('HOME LOG'+UserService.currentUser)
+  })
 
 
-  console.log("HOME CTRL LOADED")
+  // console.log("HOME CTRL LOADED")
 
   $scope.showSignup = function(){
-    console.log('showSignup')
+    // console.log('showSignup')
     $('#signupModal').openModal();
   }
 
   $scope.showLogin = function(){
-    console.log('showLogin')
+    // console.log('showLogin')
     $('#loginModal').openModal();
   }
 
@@ -57,7 +55,7 @@ $scope.UserService = UserService;
 
 
   $scope.showDialog =function(type) {
-    console.log('made it this far.')
+    // console.log('made it this far.')
        if(type==='signup'){
 
        // var parentEl = angular.element(document.body);
@@ -106,7 +104,7 @@ $scope.UserService = UserService;
 
 
   $scope.closeDialog = function(){
-    console.log('clicked closeDialog()')
+    // console.log('clicked closeDialog()')
     $mdDialog.hide();
   }
 

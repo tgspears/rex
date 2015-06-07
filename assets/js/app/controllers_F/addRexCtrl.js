@@ -1,6 +1,6 @@
 RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '$mdToast', 'UserService',function($scope, $http,$routeParams,$location,$mdToast,UserService){
 
-	console.log('ADD REX CTRL LOADED!')
+	// console.log('ADD REX CTRL LOADED!')
 
 		
 	$scope.UserService = UserService;
@@ -8,7 +8,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-		console.log($scope.currentUser)
+		// console.log($scope.currentUser)
     if($scope.currentUser==false){
       $location.path('/')
     }
@@ -16,7 +16,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
   $scope.showList = function(){
 
-    console.log($scope.currentUser)
+    // console.log($scope.currentUser)
 
     // console.log("made it into showList")
     $http({
@@ -28,7 +28,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
     })
     .success(function(data, status){
       $scope.lists = data;
-      console.log('lists',data)
+      // console.log('lists',data)
     })
     .error(function(data,status){
       $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
@@ -39,11 +39,11 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 	$scope.whatMode = "ADD"
 
 	if (id){
-		console.log(id)
+		// console.log(id)
 		$http({method:'GET',url:'/api/rex/'+id})
 		  .success(function(data, status) {
 		      $scope.rex = data;
-		      console.log('data',data)
+		      // console.log('data',data)
 		   })
 		  .error(function(data, status) {
 		      alert("Error in get method",data);
@@ -52,7 +52,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 	}
 
 	$scope.addRex = function(){
-		console.log("add rex working!");
+		// console.log("add rex working!");
 
 		var rexInfo = {
 			name:$scope.newRex.name,
@@ -68,12 +68,12 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			list_id:$scope.newRex.listId
 		}
 
-		console.log('rexInfo: '+rexInfo[0])
+		// console.log('rexInfo: '+rexInfo[0])
 
 		if(id){
 			$http.put('/api/rex/'+id, rexInfo)
 			.success(function(data){
-				console.log(data)
+				// console.log(data)
 				// alert(data.name+' has been edited!')
 				$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
 				$location.path('/myrex')
@@ -81,7 +81,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 		}else{
 			$http.post('/api/rex', rexInfo)
 			.success(function(data){
-				// alert(data.name+' has been added to your Rex!')
+				// console.log(data);
 				$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
 				$location.path('/myrex')
 			})
