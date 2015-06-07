@@ -67,10 +67,10 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
 
 RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
 
-  console.log('ANGULAR READY')
+  // console.log('ANGULAR READY')
 
   UserService.check(function(err,data){
-    console.log('check', err, data);
+    // console.log('check', err, data);
   })
 
 }])
