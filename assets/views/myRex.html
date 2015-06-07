@@ -9,16 +9,17 @@
             <ul>
               <!-- <li class="catAcc" ng-repeat="rex in rexes | filter:{category:'restaurant'}"> -->
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'restaurant'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                </div>
                 </div>
 
                 </md-whiteframe>
@@ -32,18 +33,18 @@
           <div class="collapsible-body">
             <ul>
                <md-whiteframe ng-repeat="rex in rexes | filter:{category:'accommodations'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                   </div>
                 </div>
-
               </md-whiteframe>
             </ul>
           </div>
@@ -54,18 +55,18 @@
             <ul>
              
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'nature'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
-                </div>
-
+                 <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                    </div>
+                 </div>
                 </md-whiteframe>
               </ul>
           </div>
@@ -76,18 +77,18 @@
             <ul>
              
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'shopping'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
-                </div>
-
+                 <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                    </div>
+                   </div>
                 </md-whiteframe>
             </ul>
           </div>
@@ -98,18 +99,18 @@
             <ul>
             
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'landmarks'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
-                </div>
-
+                  <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                    </div>
+                 </div>
                 </md-whiteframe>
             </ul>
           </div>
@@ -120,18 +121,18 @@
             <ul>
              
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'events'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                  <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}} <br>{{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
                 </div>
-
+                  </div>
                 </md-whiteframe>
             </ul>
           </div>
@@ -142,18 +143,18 @@
             <ul>
              
                <md-whiteframe ng-repeat="rex in rexes | filter:{category:'museums'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
-                </div>
-
+                   <div class="rex-div">
+                      <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                      <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                      <!-- <div>{{rex.email}}</div> -->
+                      <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                      <!-- <div>{{rex.notes}}</div> -->
+                      <div class="rex-btns">
+                        <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                        <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                        <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                      </div>
+                   </div>
                 </md-whiteframe>
             </ul>
           </div>
@@ -164,18 +165,18 @@
             <ul>
               
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'nightlife'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                  <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
                 </div>
-
+                  </div>
                 </md-whiteframe>
             </ul>
           </div>
@@ -186,18 +187,18 @@
             <ul>
              
                 <md-whiteframe ng-repeat="rex in rexes | filter:{category:'other'}" class="md-whiteframe-z2" layout layout-align="center center">
-                
-                <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
-                <span class="rex-address">{{rex.street}} {{rex.city}},{{rex.state}},{{rex.country}}</span>
-                <!-- <div>{{rex.email}}</div> -->
-                <!-- <img src="{{rex.image}}" class="eachImg"> -->
-                <!-- <div>{{rex.notes}}</div> -->
-                <div class="rex-btns">
-                  <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
-                  <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-                  <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
-                </div>
-
+                  <div class="rex-div">
+                    <a href="{{rex.website}}"><div class="rex-name">{{rex.name}}</div></a><br>
+                    <span class="rex-address">{{rex.street}}<br> {{rex.city}},{{rex.state}},{{rex.country}}</span>
+                    <!-- <div>{{rex.email}}</div> -->
+                    <!-- <img src="{{rex.image}}" class="eachImg"> -->
+                    <!-- <div>{{rex.notes}}</div> -->
+                    <div class="rex-btns">
+                      <a class="rex-share"><i class="purple lighten-1 btn-floating btn waves-effect waves-light mdi-communication-email" ng-click="showDialog(rex)"></i></a>
+                      <a href="tel:{{rex.phone}}" class="rex-phone"><i class="grey darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
+                      <a class="rex-edit" href="/editrex/{{rex.id}}"><i class="btn-floating btn waves-effect waves-light indigo darken-4 mdi-editor-mode-edit"></i></a>
+                    </div>
+                  </div>
                 </md-whiteframe>
             </ul>
           </div>

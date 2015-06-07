@@ -5,20 +5,20 @@
   <form ng-submit="yelpSearch()" id="search-form">
     <!-- <div class="input-field"> -->
     <md input-container>
-      <label><i class="mdi-action-search"></i>SEARCH LOCATION</label>
+      <label><i class="mdi-action-search"></i>SEARCH LOCATION</label><br>
       <input style="width:85%" class="search-bar" id="searchLocation" placeholder="ENTER A PLACE" type="search" ng-model="searchLocation" required>
     </md input-container><br><br>
       <!-- <i class="mdi-navigation-close"></i> -->
     <!-- </div> -->
     <!-- <div class="input-field"> -->
     <md input-container>
-      <label for="search"><i class="mdi-action-search"></i>SEARCH TERM</label>
+      <label for="search"><i class="mdi-action-search"></i>SEARCH TERM</label><br>
       <input style="width:85%" class="search-bar" id="searchTerm" placeholder="ENTER A SEARCH TERM" type="search" ng-model="searchTerm" required>
       <!-- <i class="mdi-navigation-close"></i> -->
     <!-- </div> -->
     </md>
     <div>
-      <input type="submit" class="modal-action modal-close md-raised waves-effect btn-flat waves-white purple lighten-1 search-btn" value="SEARCH">
+      <md-button type="submit" class="modal-action modal-close md-raised waves-effect btn-flat waves-purple purple lighten-1 search-btn">SEARCH</md-button>
     </div>
   </form>
 </div>
