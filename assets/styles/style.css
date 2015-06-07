@@ -18,6 +18,9 @@ body {
   clear: both;
 }
 
+select.rexSelect.browser-default.ng-untouched {
+	background-color: rgba(148,36,159,.2);
+}
 
 /*MODAL*/
 
