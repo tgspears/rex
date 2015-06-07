@@ -224,6 +224,17 @@ i.mdi-navigation-close {
 	height:400px;
 }*/
 
+#search-field{
+	width:100%;
+	display:inline-block;
+}
+
+.each-result{
+	width:15%;
+	display:inline-block;
+	margin-left:4.2%;
+}
+
 .add-rex-plus{
 	margin-left:230px;
 	margin-top:5px;
@@ -238,6 +249,10 @@ span.card-title{
 	line-height:6%;
 }
 
+.card{
+	position:relative;
+}
+
 .btn-flat{
 	width:100%;
 }
@@ -245,6 +260,7 @@ span.card-title{
 input.search-bar{
 	width:85%;
 	margin:0 auto;
+	padding-left:10px;
 }
 
 input#searchLocation.search-bar:focus{
@@ -256,6 +272,7 @@ input#searchLocation.search-bar:focus{
 input#searchTerm.search-bar:focus{
 	border:1px solid  rgb(45,49,60);
 	border-radius:5px;
+	padding:4px;
 
 }
 
