@@ -50,11 +50,16 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
 
     $http.post('/api/list', newList)
     .success(function(data){
+      $scope.lists.push(data)
+      console.log("Data HERE", $scope.lists)
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
       $scope.closeDialog();
-    })
+      // $scope.$apply();
+      // console.log("SHOW LIST IN SUCCESS ABOUT TO BE CALLED")
       $scope.showList();
-
+      
+    })
+    
     console.log(newList)
 
 
@@ -74,27 +79,27 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
       });
     }
 
-  $scope.showList = function(){
+  // $scope.showList = function(){
 
-    console.log($scope.currentUser)
+  //   console.log($scope.currentUser)
 
-    // console.log("made it into showList")
-    $http({
-      method:'GET',
-      url:'/api/list',
-      params:{
-        userId:UserService.currentUser.id
-      }
-    })
-    .success(function(data, status){
-      $scope.lists = data;
-      console.log('lists',data)
-    })
-    .error(function(data,status){
-      $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
-    })
-  }
-
+  //   // console.log("made it into showList")
+  //   $http({
+  //     method:'GET',
+  //     url:'/api/list',
+  //     params:{
+  //       userId:UserService.currentUser.id
+  //     }
+  //   })
+  //   .success(function(data, status){
+  //     $scope.lists = data;
+  //     console.log('lists',data)
+  //   })
+  //   .error(function(data,status){
+  //     $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
+  //   })
+  // }
+  console.log("Show List function about to get called")
   $scope.showList();
 
 }])
