@@ -72,10 +72,6 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
       $mdToast.show($mdToast.simple().content('Your Rex has been deleted.'))
 
       $scope.showRex();
-
-      Rex.query(function(data){
-        $scope.rexes = data;
-      })
     })
   }
 

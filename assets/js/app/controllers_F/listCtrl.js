@@ -19,6 +19,15 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
     $mdDialog.hide();
   }
 
+  $scope.deleteList = function(idx){
+    $http.delete('/api/list/'+idx)
+    .success(function(data,status){
+      $mdToast.show($mdToast.simple().content('Your List has been deleted.'))
+
+      $scope.showList();
+    })
+  }
+
   $scope.showList = function(){
 
     // console.log($scope.currentUser)
