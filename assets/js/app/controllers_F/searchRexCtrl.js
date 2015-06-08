@@ -1,11 +1,11 @@
 RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService', function($scope,$http,$location,UserService){
-	console.log('Search Controller Loaded!')
+	// console.log('Search Controller Loaded!')
 
 	$scope.UserService = UserService;
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-		console.log($scope.currentUser)
+		// console.log($scope.currentUser)
     if($scope.currentUser==false){
       $location.path('/')
     }
@@ -36,10 +36,10 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 			}
 		}
 
-		console.log(yelpReq)
+		// console.log(yelpReq)
 
 		$http(yelpReq).success(function(data){
-			console.log(data);
+			// console.log(data);
 			$scope.results = data.data.businesses;
 			// console.log('NAME:', data.data.businesses[0].name)
 			$scope.total = data.data.total;
@@ -64,10 +64,12 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 			// notes:$scope.results[idx].notes
 		}
 
+		console.log(newYelpRex);
+
 		$http.post('/api/rex', newYelpRex)
 		.success(function(data){
 			var id=data.id
-			$location.path('/editrex/'+id)
+			$location.path('/editit/'+id)
 			// alert(data.name+' has been added to your Rex!')
 		})
 

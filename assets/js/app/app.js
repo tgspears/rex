@@ -53,12 +53,16 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
     controller:'searchRexCtrl'
   })
   .when('/editrex/:id',{
-    templateUrl:'/views/addRex.html',
+    templateUrl:'/views/editit.html',
     controller:'addRexCtrl'
   })
   .when('/list/:id',{
     templateUrl:'/views/myRex.html',
     controller:'myRexCtrl'
+  })
+  .when('/editit/:id',{
+    templateUrl:'/views/editit.html',
+    controller:'addRexCtrl'
   })
   .otherwise({
     templateUrl:'/views/404.html'
@@ -67,10 +71,10 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
 
 RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
 
-  console.log('ANGULAR READY')
+  // console.log('ANGULAR READY')
 
   UserService.check(function(err,data){
-    console.log('check', err, data);
+    // console.log('check', err, data);
   })
 
 }])

@@ -224,9 +224,28 @@ i.mdi-navigation-close {
 	height:400px;
 }*/
 
-.add-rex-plus{
-	margin-left:230px;
-	margin-top:5px;
+#search-field{
+	width:100%;
+	display:inline-block;
+}
+
+.each-result{
+	width:15%;
+	display:inline-block;
+	margin-left:4.2%;
+}
+
+.add-yelp-rex.btn-floating.btn-large{
+	margin-left:80%;
+	width:40px;
+	height:40px;
+}
+
+.add-yelp-rex.btn-floating.btn-large i{
+	font-size:18px;
+	position:relative;
+	top:-6px;
+
 }
 
 span.card-title{
@@ -234,8 +253,30 @@ span.card-title{
 
 }
 
+.rate-reviews{
+	font-size:12px;
+}
+
+
 .card .card-content .card-title{
 	line-height:6%;
+}
+
+.card .card-title{
+	font-size:18px !important;
+}
+
+a.result-name-link{
+	color:rgb(16,26,89);
+
+}
+
+a.result-name-link:hover{
+	color:rgb(148,36,159);
+}
+
+.card{
+	position:relative;
 }
 
 .btn-flat{
@@ -245,6 +286,7 @@ span.card-title{
 input.search-bar{
 	width:85%;
 	margin:0 auto;
+	padding-left:10px;
 }
 
 input#searchLocation.search-bar:focus{
@@ -256,6 +298,7 @@ input#searchLocation.search-bar:focus{
 input#searchTerm.search-bar:focus{
 	border:1px solid  rgb(45,49,60);
 	border-radius:5px;
+	/*padding:4px;*/
 
 }
 
@@ -285,11 +328,18 @@ input#searchTerm.search-bar:focus{
 }
 
 .result-address{
-	font-size:30px;
+	font-size:16px;
 	float:right;
 	margin-top:40px;
 	margin-left:60px;
+	width:100%;
 }
+
+i.mdi-navigation-close{
+	left:0;
+}
+
+
 
 
 /*MY LIST*/
@@ -371,7 +421,8 @@ a.eachList {
 }
 
 .eachList:hover{
-	color:rgb(16,26,89);
+	/*color:rgb(16,26,89);*/
+	color:white;
 	text-shadow: 1px 1px 1px rgb(45,49,60);
 	background-color:white;
 }

@@ -24,37 +24,38 @@
 </div>
 
 
-<ul>
+<ul id="search-field">
 
-    <li ng-repeat="result in results">
+    <li ng-repeat="result in results" class="each-result">
         <div class="card small">
                 <div class="card-image waves-effect waves-block waves-light">
                   <img class="activator" src={{result.image_url}}>
                 </div>
                 <div class="card-content">
-                  <span style="font-size:20px" class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
-                  <p>{{result.rating}} <i class="mdi-action-grade"></i>|{{result.review_count}} REVIEWS</p>
+                  <span style="font-size:17px" class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
+                  <p class="rate-reviews">{{result.rating}} <i class="mdi-action-grade"></i>|{{result.review_count}} REVIEWS</p>
+                  <p>{{result.location.address[0]}}</p>
 
                   <!-- Hidden form for passing data -->
                     <form ng-submit="addYelpRex($index)">
                         
-                        <button class="add-rex-plus btn-floating btn-large waves-effect waves-light purple lighten-1" type="submit"><i class="mdi-content-add"></i></button>
+                        <button class="add-yelp-rex btn-floating btn-large waves-effect waves-light purple lighten-1" type="submit"><i class="mdi-content-add"></i></button>
 
                     </form>
 
                 </div>
                 <div class="card-reveal">
                   
-                      <a href="{{result.url}}"><span class="card-title grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-close right"></i></span></a>
-                  <p>
+                        
+                      <span><span class="card-title grey-text text-darken-4"><i class="result-close mdi-navigation-close right"></i><a class="result-name-link" href="{{result.url}}">{{result.name}}</a></span><a href="tel:{{result.display_phone}}" class="rex-phone"><i class="indigo darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a></span>
+                        <p class="result-details">
                       
-                        <a href="tel:{{result.display_phone}}" class="rex-phone"><i class="indigo darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a>
-
+                      
 
                       
                       <!-- {{result.rating}} -->
                       <!-- {{result.review_count}} -->
-                      <span class="result-address">{{result.location.address[0]}} {{result.location.city}},{{result.location.state_code}},{{result.location.country_code}}</span>
+                      <span class="result-address">{{result.location.address[0]}} {{result.location.city}},&nbsp{{result.location.state_code}},&nbsp{{result.location.country_code}}</span>
                      <!--  {{result.location.address}}
                       {{result.location.city}}
                       {{result.location.state_code}}

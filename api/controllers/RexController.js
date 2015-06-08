@@ -18,9 +18,9 @@ module.exports = {
 
   yelpSearch: function(req,res){
 
-  	console.log(req.params);
+  	// console.log(req.params);
 	  yelp.search({term:req.query.term, location:req.query.location}, function(error,data){
-	  	console.log(data)
+	  	// console.log(data)
 	  	res.send({data: data, error: error})
 	  });
 
@@ -28,7 +28,7 @@ module.exports = {
 
 	sendEmail: function(req,res){
 
-		console.log(req.params);
+		// console.log(req.params);
 
 		var email = new sendgrid.Email();
 
@@ -56,7 +56,7 @@ module.exports = {
 			if(err){
 				return console.error(err);
 			}
-			console.log(json);
+			console.log();
 		});
 
 	}

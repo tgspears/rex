@@ -1,6 +1,6 @@
 RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToast', '$mdDialog', function($scope,$http,UserService,$mdToast,$mdDialog){
 
-	console.log('Modal controller working')
+	// console.log('Modal controller working')
 
 	$scope.UserService = UserService;
   $scope.lists = [];
@@ -8,7 +8,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-		console.log($scope.currentUser)
+		// console.log($scope.currentUser)
     if($scope.currentUser==false){
       $location.path('/')
     }
@@ -16,7 +16,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
 
 	$scope.showList = function(){
 
-    console.log($scope.currentUser)
+    // console.log($scope.currentUser)
 
     // console.log("made it into showList")
     $http({
@@ -28,7 +28,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
     })
     .success(function(data, status){
       $scope.lists = data;
-      console.log('lists',data)
+      // console.log('lists',data)
     })
     .error(function(data,status){
       $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
@@ -36,7 +36,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
   }
 
    $scope.addList = function(){
-    console.log("LIST ADD FUNCTION REACHED.")
+    // console.log("LIST ADD FUNCTION REACHED.")
 
     var newList = {
       title:$scope.newList.title,
@@ -47,18 +47,18 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
     .success(function(data){
       $scope.lists.push(data)
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
-      $scope.closeDialog();
+      $scope.closeDialog(data);
       // $scope.$apply();
     })
       $scope.showList();
 
-    console.log(newList)
+    // console.log(newList)
 
 
   }
 
-   $scope.closeDialog = function(){
-    console.log('clicked closeDialog()')
+   $scope.closeDialog = function(data){
+    console.log('clicked closeDialog()'+data)
     $mdDialog.hide();
   }
 

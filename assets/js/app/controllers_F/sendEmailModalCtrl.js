@@ -2,7 +2,7 @@ RexApp.controller('sendEmailModalCtrl', ['rex','$scope','UserService','$mdDialog
 
 	$scope.rex = rex;
 
-	console.log('wasd',$scope.rex);
+	// console.log('wasd',$scope.rex);
 
   $scope.closeDialog = function(){
     $mdDialog.hide();
@@ -10,7 +10,7 @@ RexApp.controller('sendEmailModalCtrl', ['rex','$scope','UserService','$mdDialog
 
   $scope.sendEmail = function(target,name,city,email){
 
-    console.log(UserService.currentUser.username)
+    // console.log(UserService.currentUser.username)
 
     var emailReq = {
       method: 'GET',
@@ -31,10 +31,10 @@ RexApp.controller('sendEmailModalCtrl', ['rex','$scope','UserService','$mdDialog
       }
     }
 
-    console.log(emailReq);
+    // console.log(emailReq);
 
     $http(emailReq).success(function(data){
-      console.log(data);
+      console.log();
     })
 
     $scope.closeDialog();
