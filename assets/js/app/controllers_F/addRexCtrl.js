@@ -134,6 +134,16 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 		})
 	}
 
+	$scope.deleteRex = function(){
+		$http.destroy('/api/rex/'+id,rexInfo)
+		.success(function(data){
+			console.log('deleteRex',data);
+			$mdToast.show($mdToast.simple().content('Rex Deleted'));
+			$location.path('/myrex')
+		})
+		console.log('deleteRex',rexInfo)
+	}
+
 	$scope.showList();
 
 }]);
