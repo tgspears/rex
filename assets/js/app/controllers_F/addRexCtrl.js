@@ -51,6 +51,64 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 		$scope.whatMode = "EDIT"
 	}
 
+	$scope.editit = function(){
+		var rexInfo = {
+			name:$scope.newRex.name,
+			street:$scope.newRex.street,
+			city:$scope.newRex.city,
+			state:$scope.newRex.state,
+			country:$scope.newRex.country,
+			phone:$scope.newRex.phone,
+			email:$scope.newRex.email,
+			category:$scope.newRex.category,
+			website:$scope.newRex.website,
+			notes:$scope.newRex.notes,
+			list_id:$scope.newRex.listId
+		}
+		if(!rexInfo.name){
+			rexInfo.name = $scope.rex.name;
+		}
+		if(!rexInfo.street){
+			rexInfo.street = $scope.rex.street;
+		}
+		if(!rexInfo.city){
+			rexInfo.city = $scope.rex.city;
+		}
+		if(!rexInfo.state){
+			rexInfo.state = $scope.rex.state;
+		}
+		if(!rexInfo.country){
+			rexInfo.country = $scope.rex.country;
+		}
+		if(!rexInfo.phone){
+			rexInfo.phone = $scope.rex.phone;
+		}
+		if(!rexInfo.email){
+			rexInfo.email = $scope.rex.email;
+		}
+		if(!rexInfo.category){
+			rexInfo.category = $scope.rex.category;
+		}
+		if(!rexInfo.website){
+			rexInfo.website = $scope.rex.website;
+		}
+		if(!rexInfo.notes){
+			rexInfo.notes = $scope.rex.notes;
+		}
+		if(!rexInfo.list_id){
+			rexInfo.list_id = $scope.rex.list_id;
+		}
+
+		$http.put('/api/rex/'+id, rexInfo)
+		.success(function(data){
+			console.log('editit',data)
+			// alert(data.name+' has been edited!')
+			$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
+			$location.path('/myrex')
+		})
+		console.log('rexInfo',rexInfo)
+	}
+
 	$scope.addRex = function(){
 		// console.log("add rex working!");
 
@@ -68,24 +126,12 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			list_id:$scope.newRex.listId
 		}
 
-		// console.log('rexInfo: '+rexInfo[0])
-
-		if(id){
-			$http.put('/api/rex/'+id, rexInfo)
-			.success(function(data){
-				// console.log(data)
-				// alert(data.name+' has been edited!')
-				$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
-				$location.path('/myrex')
-			})
-		}else{
-			$http.post('/api/rex', rexInfo)
-			.success(function(data){
-				// console.log(data);
-				$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
-				$location.path('/myrex')
-			})
-		}
+		$http.post('/api/rex', rexInfo)
+		.success(function(data){
+			console.log(rexInfo);
+			$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
+			$location.path('/myrex')
+		})
 	}
 
 	$scope.showList();

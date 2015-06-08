@@ -34,6 +34,7 @@
                 <div class="card-content">
                   <span style="font-size:20px" class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
                   <p>{{result.rating}} <i class="mdi-action-grade"></i>|{{result.review_count}} REVIEWS</p>
+                  <p>{{result.location.address[0]}}</p>
 
                   <!-- Hidden form for passing data -->
                     <form ng-submit="addYelpRex($index)">

@@ -1,5 +1,5 @@
 RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService', function($scope,$http,$location,UserService){
-	console.log('Search Controller Loaded!')
+	// console.log('Search Controller Loaded!')
 
 	$scope.UserService = UserService;
 
@@ -64,10 +64,12 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 			// notes:$scope.results[idx].notes
 		}
 
+		console.log(newYelpRex);
+
 		$http.post('/api/rex', newYelpRex)
 		.success(function(data){
 			var id=data.id
-			$location.path('/editrex/'+id)
+			$location.path('/editit/'+id)
 			// alert(data.name+' has been added to your Rex!')
 		})
 

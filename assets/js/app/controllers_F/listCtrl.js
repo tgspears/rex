@@ -56,13 +56,9 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
       $scope.closeDialog();
       // $scope.$apply();
       // console.log("SHOW LIST IN SUCCESS ABOUT TO BE CALLED")
-      $scope.showList();
-      
     })
-    
+    location.reload(false);
     // console.log(newList)
-
-
   }
 
   $scope.showDialog =function($event) {

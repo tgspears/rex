@@ -3,7 +3,7 @@
 
 	<ul id="listoflists" class="clearfix">
 			<li class="eachli md-raised">
-		<md-button ng-repeat="list in lists" href = "/list/{{list.id}}" class="eachList btn-flat">
+		<md-button ng-repeat="list in lists" href = "/list/{{list.id}}" class="eachList btn-flat" ng-click="showList()">
 			{{list.title}}
 		</md-button>
 			</li>
