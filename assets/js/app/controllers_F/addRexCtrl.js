@@ -70,22 +70,22 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
 		console.log('rexInfo: '+rexInfo[0])
 
-		if(id){
-			$http.put('/api/rex/'+id, rexInfo)
-			.success(function(data){
-				console.log(data)
-				// alert(data.name+' has been edited!')
-				$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
-				$location.path('/myrex')
-			})
-		}else{
-			$http.post('/api/rex', rexInfo)
-			.success(function(data){
-				// alert(data.name+' has been added to your Rex!')
-				$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
-				$location.path('/myrex')
-			})
-		}
+		// if(id){
+		// 	$http.put('/api/rex/'+id, rexInfo)
+		// 	.success(function(data){
+		// 		console.log('PUT'+ data)
+		// 		// alert(data.name+' has been edited!')
+		// 		$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
+		// 		$location.path('/myrex')
+		// 	})
+		// }else{
+		// 	$http.post('/api/rex', rexInfo)
+		// 	.success(function(data){
+		// 		// alert(data.name+' has been added to your Rex!')
+		// 		$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
+		// 		$location.path('/myrex')
+		// 	})
+		// }
 	}
 
 	$scope.showList();

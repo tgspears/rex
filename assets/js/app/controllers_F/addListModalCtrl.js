@@ -47,7 +47,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
     .success(function(data){
       $scope.lists.push(data)
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
-      $scope.closeDialog();
+      $scope.closeDialog(data);
       // $scope.$apply();
     })
       $scope.showList();
@@ -57,8 +57,9 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
 
   }
 
-   $scope.closeDialog = function(){
-    console.log('clicked closeDialog()')
+   $scope.closeDialog = function(data){
+    console.log('clicked closeDialog()'+data)
+
     $mdDialog.hide();
   }
 
