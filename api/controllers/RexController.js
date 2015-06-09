@@ -32,32 +32,28 @@ module.exports = {
 
 		var email = new sendgrid.Email();
 
-		// NEEDS //
-		// to
-		// name
-		// street
-		// city
-		// state
-		// country
-		// phone
-		// email
-		// website
-		// notes
-		// username (of sending user)
-		// text (user to user notes)
-
 		sendgrid.send({
 			to:req.query.to,// To
 			from:'SendRexGoSpears@gmail.com',
-			subject:req.query.username+" thinks you'd like to know about "+req.query.name,// This person thinks you'd like to know about this place!
-			text:req.query.text,// User to user note
-			html:'<h1>'+req.query.name+'</h1><span>'+req.query.street+' '+req.query.city+','+req.query.state+','+req.query.country+'</span><p>'+req.query.phone+'</p><p>'+req.query.email+'</p><p>'+req.query.website+'</p><p>'+req.query.notes+'</p>',// Contains - Name,Street,City,State,Country,Phone,Email,Website,Notes
+			subject:req.query.username+" thinks you'd like to know about "+req.query.name,
+			html:'<p>'+req.query.text+'</p><h1>'+req.query.name+'</h1><p>'+req.query.street+'</p><p>'+req.query.city+', '+req.query.state+' - '+req.query.country+'</p><p><a href="tel:'+req.query.phone+'">tel. '+req.query.phone+'</a></p><p><a href="email:'+req.query.email+'">email. '+req.query.email+'</a></p><p><a href="'+req.query.website+'">site. '+req.query.website+'</a></p>'
 		}, function(err,json){
 			if(err){
 				return console.error(err);
 			}
 			console.log();
 		});
+
+		// req.query.username
+		// req.query.name
+		// req.query.text
+		// req.query.street
+		// req.query.city
+		// req.query.state
+		// req.query.country
+		// req.query.phone
+		// req.query.email
+		// req.query.website
 
 	}
 };

@@ -545,6 +545,11 @@ i.rex-delete:hover{
 	font-weight:200;
 }
 
+#location-header i {
+	position: relative;
+	bottom: 14%;
+}
+
 a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	margin-top:-10px;
 }
@@ -564,6 +569,7 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 }
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
 	.collapsible{
 		width:100%;
 		margin-left:0;
@@ -571,6 +577,10 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 
 	#location-header{
 		font-size:30px;
+	}
+
+	#location-header i {
+		bottom: 4%;
 	}
 
 }

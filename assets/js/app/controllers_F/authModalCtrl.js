@@ -15,6 +15,7 @@ RexApp.controller('authModalCtrl', ['$scope', 'UserService', '$modal', '$http', 
         // console.log(data,data.error);
         $mdToast.show($mdToast.simple().content('You have been logged in!'))
         $scope.closeDialog();
+        $location.path("/myrex");
       }
     })
   }
