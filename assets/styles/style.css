@@ -56,6 +56,11 @@ img#nav-logo{
 .mdi-navigation-menu{
 	color:rgb(148,36,159);
 	font-size:22px;
+
+}
+
+button#nav-btn{
+	padding-top:2px;
 }
 
 #hello-user{
@@ -193,6 +198,7 @@ md-input-container.md-default-theme.md-input-invalid label {
 
 .modalHeader {
 	font-size: 30px;
+	line-height:100%;
 }
 
 i.mdi-navigation-close {
@@ -205,6 +211,7 @@ i.mdi-navigation-close {
 
 .modalButton {
 	color: white;
+	margin-left:-1px;
 }
 
 /*SEARCH RESULT PAGE*/
@@ -339,6 +346,32 @@ i.mdi-navigation-close{
 	left:0;
 }
 
+.add-yelp-rex.btn-floating.btn-large i{
+	top:-8px;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.each-result{
+		width:90%;
+	}
+
+	.result-address{
+		font-size:20px;
+	}
+
+	.add-yelp-rex.btn-floating.btn-large{
+	margin-left:90%;
+	width:40px;
+	height:40px;
+    }
+    a.result-name-link{
+    	font-size:28px;
+    	margin-bottom:8px;
+    }
+
+}
+
 
 
 
@@ -407,6 +440,8 @@ a.eachList {
 	text-shadow:1px 1px 1px rgb(45,49,60);
 	font-weight:200;
 	background-color:rgb(148,36,159);
+	height:50px;
+	padding-top:6px;
 
 
 }
@@ -448,6 +483,16 @@ a.add-search-btn{
 	width:100%;
 	right:2.5%;
 }
+
+i.rex-delete:hover{
+	padding-top:2px;
+
+}
+
+.btn i, .btn-large i, .btn-floating i, .btn-large i, .btn-flat i{
+	padding-top:2px;
+}
+
 
 
 /*ADD A REX*/
@@ -578,8 +623,8 @@ div.rex-name{
 	font-size:20px;
 }
 
-.rex-edit{
-
+.rex-delete i.mdi-content-clear{
+	font-size:20px;
 }
 
 .rex-share{
@@ -605,8 +650,8 @@ div.rex-name{
 	.rex-btns{
 		
 		margin-top:20px;
-		margin-left:47%;
-		width:50%;
+		margin-left:42%;
+		width:60%;
 	}
 
 
@@ -630,6 +675,20 @@ div.rex-name{
 	.rex-address{
 		font-size:17px;
 	}
+}
+
+/*ADD LIST MODAL*/
+
+#newList-header{
+	margin-bottom:10px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+	#new-list-modal-form{
+		margin-top:30px;
+	}
+
 }
 
 
