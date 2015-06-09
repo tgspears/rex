@@ -2,24 +2,24 @@
   <md-dialog-content>
     <form ng-submit="addList()">
 
-    <div> NAME YOUR NEW REX </div>
+    <div class="modalHeader" id="newList-header"> NAME YOUR NEW REX <a ng-click="closeDialog()"><i class="mdi-navigation-close right"></i></a></div>
 
       <md-input-container>
       <!-- <label>NAME YOUR REX</label> -->
-        <input name="newList" ng-model="newList.title" placeholder="ex. Seattle or Bloomsbury" required md-maxlength="100" minlength="1">
+        <input id="new-list-modal-form" name="newList" ng-model="newList.title" placeholder="ex. Seattle or Bloomsbury" required md-maxlength="100" minlength="1">
       </md-input-container>
 
-      <div>
-        <input type="submit" class="modal-action modal-close waves-effect waves-green btn-flat" value="SUBMIT">
-      </div>
+      <md-button type="submit" class="modalButton modal-action modal-close waves-effect waves-white purple ligten-1 btn-flat">
+        SUBMIT
+      </md-button>
     </form>
 
   </md-dialog-content>
 
-  <div class="md-actions">
+ <!--  <div class="md-actions">
       <md-button ng-click="closeDialog()" class="md-primary"> 
                  Close Dialog
       </md-button>
-  </div>
+  </div> -->
 
 </md-dialog>

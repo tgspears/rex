@@ -34,7 +34,7 @@
                 <div class="card-content">
                   <span style="font-size:17px" class="card-title activator grey-text text-darken-4">{{result.name}} <i class="mdi-navigation-more-vert right"></i></span>
                   <p class="rate-reviews">{{result.rating}} <i class="mdi-action-grade"></i>|{{result.review_count}} REVIEWS</p>
-                  <p>{{result.location.address[0]}}</p>
+                  
 
                   <!-- Hidden form for passing data -->
                     <form ng-submit="addYelpRex($index)">
@@ -55,7 +55,7 @@
                       
                       <!-- {{result.rating}} -->
                       <!-- {{result.review_count}} -->
-                      <span class="result-address">{{result.location.address[0]}} {{result.location.city}},&nbsp{{result.location.state_code}},&nbsp{{result.location.country_code}}</span>
+                      <span class="result-address">{{result.location.address[0]}}<br> {{result.location.city}},&nbsp{{result.location.state_code}},&nbsp{{result.location.country_code}}</span>
                      <!--  {{result.location.address}}
                       {{result.location.city}}
                       {{result.location.state_code}}
