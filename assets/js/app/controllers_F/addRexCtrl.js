@@ -99,13 +99,17 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			rexInfo.list_id = $scope.rex.list_id;
 		}
 
-		$http.put('/api/rex/'+id, rexInfo)
-		.success(function(data){
-			console.log('editit',data)
-			// alert(data.name+' has been edited!')
-			$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
-			$location.path('/myrex')
-		})
+		if(!rexInfo.category || !rexInfo.list_id){
+			$mdToast.show($mdToast.simple().content('Please select a List and Category for this Rex.'))
+		} else {
+			$http.put('/api/rex/'+id, rexInfo)
+			.success(function(data){
+				console.log('editit',data)
+				// alert(data.name+' has been edited!')
+				$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
+				$location.path('/myrex')
+			})
+		}
 		console.log('rexInfo',rexInfo)
 	}
 
@@ -126,12 +130,17 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			list_id:$scope.newRex.listId
 		}
 
-		$http.post('/api/rex', rexInfo)
-		.success(function(data){
-			console.log(rexInfo);
-			$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
-			$location.path('/myrex')
-		})
+		if(!rexInfo.category || !rexInfo.list_id){
+			$mdToast.show($mdToast.simple().content('Please select a List and Category for this Rex.'))
+		} else {
+			$http.post('/api/rex', rexInfo)
+			.success(function(data){
+				console.log(rexInfo);
+				$mdToast.show($mdToast.simple().content(data.name+' has been added to your Rex!'))
+				$location.path('/myrex')
+			})
+		}
+
 	}
 
 	$scope.deleteRex = function(){
