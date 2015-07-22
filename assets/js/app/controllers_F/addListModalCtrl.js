@@ -1,6 +1,5 @@
 RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToast', '$mdDialog', function($scope,$http,UserService,$mdToast,$mdDialog){
 
-	// console.log('Modal controller working')
 
 	$scope.UserService = UserService;
   $scope.lists = [];
@@ -8,7 +7,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-		// console.log($scope.currentUser)
+
     if($scope.currentUser==false){
       $location.path('/')
     }
@@ -16,9 +15,6 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
 
 	$scope.showList = function(){
 
-    // console.log($scope.currentUser)
-
-    // console.log("made it into showList")
     $http({
       method:'GET',
       url:'/api/list',
@@ -28,7 +24,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
     })
     .success(function(data, status){
       $scope.lists = data;
-      // console.log('lists',data)
+
     })
     .error(function(data,status){
       $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
@@ -36,7 +32,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
   }
 
    $scope.addList = function(){
-    // console.log("LIST ADD FUNCTION REACHED.")
+
 
     var newList = {
       title:$scope.newList.title,
@@ -48,12 +44,9 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
       $scope.lists.push(data)
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
       $scope.closeDialog(data);
-      // $scope.$apply();
+
     })
       $scope.showList();
-
-    // console.log(newList)
-
 
   }
 

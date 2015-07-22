@@ -9,7 +9,6 @@ RexApp.factory('UserService', ['$http', function($http){
 			.success(function(data){
 				if(data && data.result && data.user) {
 					self.currentUser = data.user;
-					// console.log(data.user+'LOGGED IN')
 				} else {
 					self.currentUser = false;
 				}

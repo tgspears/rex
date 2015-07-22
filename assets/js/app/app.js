@@ -46,7 +46,6 @@ RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
   console.log('ANGULAR READY')
 
   UserService.check(function(err,data){
-    // console.log('check', err, data);
   })
 
 }])

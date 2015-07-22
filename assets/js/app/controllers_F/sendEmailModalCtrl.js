@@ -2,8 +2,6 @@ RexApp.controller('sendEmailModalCtrl', ['rex','$scope','UserService','$mdDialog
 
 	$scope.rex = rex;
 
-	// console.log('wasd',$scope.rex);
-
   $scope.closeDialog = function(){
     $mdDialog.hide();
   }

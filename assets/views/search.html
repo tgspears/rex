@@ -3,19 +3,16 @@
 <div id="search-header">SEARCH LOCATIONS</div>
 
   <form ng-submit="yelpSearch()" id="search-form">
-    <!-- <div class="input-field"> -->
+
     <md input-container>
       <label><i class="mdi-action-search"></i>SEARCH LOCATION</label><br>
       <input style="width:85%" class="search-bar" id="searchLocation" placeholder="ENTER A PLACE" type="search" ng-model="searchLocation" required>
     </md input-container><br><br>
-      <!-- <i class="mdi-navigation-close"></i> -->
-    <!-- </div> -->
-    <!-- <div class="input-field"> -->
+
     <md input-container>
       <label for="search"><i class="mdi-action-search"></i>SEARCH TERM</label><br>
       <input style="width:85%" class="search-bar" id="searchTerm" placeholder="ENTER A SEARCH TERM" type="search" ng-model="searchTerm" required>
-      <!-- <i class="mdi-navigation-close"></i> -->
-    <!-- </div> -->
+
     </md>
     <div>
       <md-button type="submit" class="modal-action modal-close md-raised waves-effect btn-flat waves-purple purple lighten-1 search-btn">SEARCH</md-button>
@@ -50,16 +47,9 @@
                       <span><span class="card-title grey-text text-darken-4"><i class="result-close mdi-navigation-close right"></i><a class="result-name-link" href="{{result.url}}">{{result.name}}</a></span><a href="tel:{{result.display_phone}}" class="rex-phone"><i class="indigo darken-4 btn-floating btn waves-effect waves-light mdi-communication-phone"></i></a></span>
                         <p class="result-details">
                       
-                      
-
-                      
-                      <!-- {{result.rating}} -->
-                      <!-- {{result.review_count}} -->
+                    
                       <span class="result-address">{{result.location.address[0]}}<br> {{result.location.city}},&nbsp{{result.location.state_code}},&nbsp{{result.location.country_code}}</span>
-                     <!--  {{result.location.address}}
-                      {{result.location.city}}
-                      {{result.location.state_code}}
-                      {{result.location.country_code}} -->
+          
                   </p>
                 </div>
         </div>
