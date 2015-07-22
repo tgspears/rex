@@ -1,12 +1,10 @@
 RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'UserService', '$routeParams','$location', function($scope,$http,$mdToast,$mdDialog,UserService,$routeParams,$location){
 
-  // console.log("MY REX CTRL LOADED");
   
   $scope.UserService = UserService;
 
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-    // console.log($scope.currentUser)
     if($scope.currentUser==false){
       $location.path('/')
     }
@@ -16,10 +14,9 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
 
 
   $scope.showDialog =function($event) {
-     // var parentEl = angular.element(document.body);
+
      $mdDialog.show({
-       // parent: parentEl,
-       // targetEvent: $event,
+
        templateUrl:'views/sendEmailModal.html',
        clickOutsideToClose: true,
        locals: {
@@ -30,7 +27,6 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   }
 
   $scope.showRex = function(){
-    // console.log('ROUTE'+$routeParams)
     $http({
       method : 'GET',
       url : '/api/rex',
@@ -40,7 +36,6 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
     })
     .success(function(data, status) {
         $scope.rexes = data;
-        // console.log('data',data)
      })
     .error(function(data, status) {
         alert("Error");
@@ -57,7 +52,6 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
     })
     .success(function(data,status){
       $scope.listData = data;
-      // console.log('LIST',data)
     })
     .error(function(data,status){
       alert("error")

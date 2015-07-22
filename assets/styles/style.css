@@ -10,16 +10,6 @@ PURPLE:rgb(148,36,159) purple lighten-1;
 
 /*ABOUT*/
 
-/*.about-photo{
-	width:10%;
-	display:inline;
-}
-
-.md-bottom-sheet{
-	display:inline;
-}*/
-
-
 
 	.about-header{
 		font-size:25px;
@@ -160,7 +150,6 @@ md-dialog {
 
 /*NAV*/
 #nav-logo{
-	/*min-width:100px;*/
 	width:24%;
 	border:3px solid white;
 	border-radius:5px;
@@ -178,9 +167,8 @@ img#nav-logo{
 }
 
 .nav-links{
-	/*color:rgb(148,36,159);*/
 	color:white;
-	/*text-shadow:1px 1px white;*/
+
 }
 
 .mdi-navigation-menu{
@@ -220,27 +208,15 @@ button#nav-btn{
 
 
 #home-graphic{
-	/*min-width:100px;*/
-	/*max-width:19%;
-	min-height:100px;*/
 	width:100%;
-/*	margin-left:40.5%;*/
 	margin-top:50px;
 	text-align:center;
-/*	border:5px solid white;
-	padding-top:20px;
-	padding-bottom:20px;
-	padding-left:50px;
-	padding-right:50px;
-	border-radius:5px;*/
 }
 
 #logo{
-	/*border:3px solid black;*/
 	width:19%;
 	margin-left:40.5%;
 	text-align:center;
-	/*min-height:100px;*/
 }
 
 
@@ -265,7 +241,6 @@ button#nav-btn{
 }
 
 button.md-raised.home-btns.md-button{
-	/*background-color:rgb(93,198,67);*/
 	color:white;
 
 }
@@ -345,21 +320,7 @@ i.mdi-navigation-close {
 }
 
 /*SEARCH RESULT PAGE*/
-/*.card.small .card-image{
-	height:250px;
-}
 
-.card{
-	width:30%;
-}
-
-.card-content{
-	height:200px;
-}
-
-.card.small{
-	height:400px;
-}*/
 
 #search-field{
 	width:100%;
@@ -457,7 +418,6 @@ input#searchTerm.search-bar:focus{
 	width:50%;
 	margin-left:20%;
 	margin-top:20px;
-	/*color:white;*/
 }
 
 .search-btn span{
@@ -586,7 +546,6 @@ a.eachList {
 }
 
 .eachList:hover{
-	/*color:rgb(16,26,89);*/
 	color:white;
 	text-shadow: 1px 1px 1px rgb(45,49,60);
 	background-color:white;
@@ -609,7 +568,6 @@ a.add-search-btn.md-raised.indigo.darken-4.md-button.md-default-theme{
 }
 
 a.add-search-btn{
-	/*left:21%;*/
 	width:100%;
 	right:2.5%;
 }
@@ -658,14 +616,9 @@ i.rex-delete:hover{
 /*REX SHOW PAGE*/
 
 
-#rex-show-body{
-	/*background-color:rgb(16,26,89);*/
-}
-
 #location-header{
 	font-size:42px;
 	color:rgb(16,26,89);
-	/*color:white;*/
 	margin-right:20px;
 	margin-left:30px;
 	text-align:center;
@@ -728,8 +681,6 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 
 .rex-name{
 	font-size:25px;
-	/*margin-top:-85px;*/
-	/*margin-left:10px;*/
 	text-decoration:none;
 	color:rgb(16,26,89);
 }
@@ -738,20 +689,12 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	color:rgb(148,36,159);
 }
 
-div.rex-name{
-	/*width:200px;*/
-
-}
 
 .rex-address{
-	/*margin-left:-120px;
-	width:45%;*/
 	font-size:18px;
 }
 
 .mdi-communication-phone{
-	/*margin-right:-40px;*/
-	/*margin-top:-80px;*/
 	font-size:20px;	
 }
 
@@ -765,10 +708,6 @@ div.rex-name{
 
 .rex-delete i.mdi-content-clear{
 	font-size:20px;
-}
-
-.rex-share{
-	/*margin-bottom:-100px;*/
 }
 
 .rex-btns{
@@ -792,12 +731,6 @@ div.rex-name{
 		margin-top:20px;
 		margin-left:42%;
 		width:60%;
-	}
-
-
-	div.rex-name{
-		/*width:200px;*/
-
 	}
 
 	.rex-name{

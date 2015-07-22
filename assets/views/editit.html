@@ -1,7 +1,6 @@
 <div id="addARexPage">
 
   <md-button ng-show="!rex.name" class="add-search-btn md-raised indigo darken-4 waves-effect waves-purple" href="/search"> <i class="mdi-action-search"></i>SEARCH LOCATIONS </md-button>
-<!--    <a href="/search" class="add-search-btn nav-links waves-effect waves-purple btn-flat indigo darken-4"><i class="mdi-action-search"></i>SEARCH LOCATIONS</a> -->
 
   <div ng-show="!rex.name" id="or">OR</div>
 
@@ -22,51 +21,31 @@
     <md-input-container>
       <label>Name: {{rex.name}}</label>
       <input name="name" ng-model="newRex.name">
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+ 
     </md-input-container>
 
     <md-input-container>
       <label>Street Address: {{rex.street}}</label>
       <input name="street" ng-model="newRex.street" md-minlength=1>
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <md-input-container>
       <label>City: {{rex.city}}</label>
       <input name="city" ng-model="newRex.city" md-minlength=1>
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <md-input-container>
       <label>State/Region: {{rex.state}}</label>
       <input name="state" ng-model="newRex.state">
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <md-input-container>
       <label>Country: {{rex.country}}</label>
       <input name="country" ng-model="newRex.country">
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <div class="input-field col s12">
@@ -88,46 +67,28 @@
     <md-input-container>
       <label>Phone Number: {{rex.phone}}</label>
       <input name="phone" ng-model="newRex.phone">
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <md-input-container>
       <label>Email: {{rex.email}}</label>
       <input name="email" ng-model="newRex.email">
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <md-input-container>
       <label>Website: {{rex.website}}</label>
       <input name="website" ng-model="newRex.website">
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+
     </md-input-container>
 
     <md-input-container>
       <label>Notes: {{rex.notes}}</label>
       <input name="notes" ng-model="newRex.notes" md-maxlength=255>
-      <!-- <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-        <div ng-message="required">This is required!</div>
-        <div ng-message="md-maxlength">That's too long!</div>
-        <div ng-message="minlength">That's too short!</div>
-      </div> -->
+ 
     </md-input-container>
 
-    <!-- <h2>UPLOAD A PHOTO</h2> -->
-
-    <!-- <input class="waves-effect waves-light btn" type="submit" value = "SUBMIT"> -->
+  
     <md-button type="" submit id="addRexSubmitButton" class="md-raised home-btns purple lighten-1"> SUBMIT </md-button>
 
 
