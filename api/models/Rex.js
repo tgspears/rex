@@ -63,7 +63,6 @@ module.exports = {
       collection:'Image',
       via:'rex'
     }
-
   }
 };
 

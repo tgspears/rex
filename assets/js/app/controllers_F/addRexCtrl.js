@@ -2,15 +2,15 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
 	$scope.UserService = UserService;
 
-
+// Current user
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
-
     if($scope.currentUser==false){
       $location.path('/')
     }
   });
 
+// Show lists for current user
   $scope.showList = function(){
 
     $http({
@@ -22,13 +22,13 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
     })
     .success(function(data, status){
       $scope.lists = data;
-
     })
     .error(function(data,status){
       $mdToast.show($mdToast.simple().content('Oops! An error has occurred. Please try again.'))
     })
   }
 
+// Toggle for Add and Edit mode
 	var id = $routeParams.id
 	$scope.whatMode = "ADD"
 
@@ -37,13 +37,14 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 		$http({method:'GET',url:'/api/rex/'+id})
 		  .success(function(data, status) {
 		      $scope.rex = data;
-		  
 		   })
 		  .error(function(data, status) {
 		      alert("Error in get method",data);
 		});
 		$scope.whatMode = "EDIT"
 	}
+
+	// Edit Rex Function
 
 	$scope.editit = function(){
 		var rexInfo = {
@@ -99,13 +100,14 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			$http.put('/api/rex/'+id, rexInfo)
 			.success(function(data){
 				console.log('editit',data)
-
 				$mdToast.show($mdToast.simple().content('Your Rex has been updated.'))
 				$location.path('/myrex')
 			})
 		}
 		console.log('rexInfo',rexInfo)
 	}
+
+	// Add Rex Function
 
 	$scope.addRex = function(){
 
@@ -123,6 +125,8 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 			list_id:$scope.newRex.listId
 		}
 
+		// Ensures that user chooses an associated list and category before they can add a Rex
+
 		if(!rexInfo.category || !rexInfo.list_id){
 			$mdToast.show($mdToast.simple().content('Please select a List and Category for this Rex.'))
 		} else {
@@ -133,8 +137,9 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 				$location.path('/myrex')
 			})
 		}
-
 	}
+
+	// Delete Rex function
 
 	$scope.deleteRex = function(){
 		$http.destroy('/api/rex/'+id,rexInfo)
@@ -150,6 +155,7 @@ RexApp.controller('addRexCtrl',['$scope', '$http','$routeParams', '$location', '
 
 }]);
 
+// Directive for setting view vaue
 RexApp.directive("value", function() {
     return {
         priority: 500,

@@ -6,7 +6,6 @@
 */
 
 module.exports = {
-
   attributes:{
     img:{
       type:'string',
@@ -16,9 +15,7 @@ module.exports = {
       type:'string',
       required:false
     },
-
     //ASSOCIATIONS//
-
     //belongs to
     rex:{
       model:'Rex'

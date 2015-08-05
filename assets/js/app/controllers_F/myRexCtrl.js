@@ -3,6 +3,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   
   $scope.UserService = UserService;
 
+// current user
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
     if($scope.currentUser==false){
@@ -12,11 +13,9 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
 
 	$scope.rexes = []
 
-
+// shows email content in modal
   $scope.showDialog =function($event) {
-
      $mdDialog.show({
-
        templateUrl:'views/sendEmailModal.html',
        clickOutsideToClose: true,
        locals: {
@@ -26,6 +25,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
     });
   }
 
+// shows current user's rexes
   $scope.showRex = function(){
     $http({
       method : 'GET',
@@ -42,6 +42,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
     });
   }
 
+// shows current user's lists
   $scope.listInfo = function(){
     $http({
       method:'GET',
@@ -59,12 +60,11 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   }
 
 
-
+// deletes rexes
   $scope.deleteRex = function(idx){
     $http.delete('/api/rex/'+idx)
     .success(function(data,status){
       $mdToast.show($mdToast.simple().content('Your Rex has been deleted.'))
-
       $scope.showRex();
     })
   }
@@ -72,6 +72,7 @@ RexApp.controller('myRexCtrl', ['$scope','$http', '$mdToast', '$mdDialog', 'User
   $scope.showRex();
   $scope.listInfo();
 
+// Accordian collapse
   $('.collapsible').collapsible({
       accordion : true // A setting that changes the collapsible behavior to expandable instead of the default accordion style
   });

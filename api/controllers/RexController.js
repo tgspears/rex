@@ -16,20 +16,16 @@ var sendgrid = require("sendgrid")(process.env.SENDGRID_USERNAME, process.env.SE
 
 module.exports = {
 
+// sending yelp search api terms
   yelpSearch: function(req,res){
-
 	  yelp.search({term:req.query.term, location:req.query.location}, function(error,data){
-
 	  	res.send({data: data, error: error})
 	  });
-
 	},
 
+// sending rex emails
 	sendEmail: function(req,res){
-
-
 		var email = new sendgrid.Email();
-
 		sendgrid.send({
 			to:req.query.to,// To
 			from:'SendRexGoSpears@gmail.com',
@@ -41,7 +37,5 @@ module.exports = {
 			}
 			console.log();
 		});
-
-
 	}
 };

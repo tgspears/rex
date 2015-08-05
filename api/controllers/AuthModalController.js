@@ -9,13 +9,11 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
 	//POST /api/auth
-
 	login: function(req,res){
 		User.findOne({email:req.body.email}).then(function(user){
 			if (user) {
 				bcrypt.compare(req.body.password,user.password,function(err,result){
 					if(err) return res.send({result:false,error:err});
-
 					if(result){
 						req.session.user = user;
 						res.send({
@@ -49,8 +47,4 @@ module.exports = {
 		res.send({result:true});
 		
 	}
-
-
-	
 };
-

@@ -1,10 +1,11 @@
+// UserService for checking current user, login and logout
+
 RexApp.factory('UserService', ['$http', function($http){
 	return {
 
 		login:function(email,password,callback){
 
 			var self = this;
-
 			$http.post('/api/auth', {email:email,password:password})
 			.success(function(data){
 				if(data && data.result && data.user) {
@@ -22,7 +23,6 @@ RexApp.factory('UserService', ['$http', function($http){
 		check: function(callback){
 
 			var self = this;
-
 			$http.get('/api/auth')
 			.success(function(data){
 				if(data && data.user){
@@ -40,8 +40,6 @@ RexApp.factory('UserService', ['$http', function($http){
 		logout: function(callback){
 
 			var self = this;
-			
-
 			$http.delete('/api/auth')
 			.success(function(data){
 			self.currentUser = false;

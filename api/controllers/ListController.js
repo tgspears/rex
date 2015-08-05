@@ -5,8 +5,8 @@
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
+// Add Rex
 module.exports = {
-
   addRex: function(req,res){
     Rex.create({
       name:req.body.name,
@@ -21,8 +21,5 @@ module.exports = {
       res.send(data)
     })
   }
-
-
-
 };
 

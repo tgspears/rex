@@ -9,7 +9,6 @@ var bcrypt = require('bcrypt');
 module.exports = {
 
   attributes: {
- 
     username:{
       type:'string',
       required: true,
@@ -32,7 +31,6 @@ module.exports = {
     fullName:function(){
       return this.firstName+ ' ' + this.lastName;
     }
-
   },
 
   beforeCreate: function(values,callback){
@@ -40,7 +38,6 @@ module.exports = {
       if(err) return callback(err);
       values.password=hash;
       callback();
-
     })
   }
 };

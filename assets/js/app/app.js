@@ -1,10 +1,11 @@
 var RexApp = angular.module('RexApp', ['ngRoute','ngMaterial', 'ui.bootstrap']);
 
-
+// Side Nav Controller
 RexApp.controller('sidenavController', function($scope, $mdSidenav) {
-
 });
 
+
+// Routes, Templates and Controllers
 RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
   $locationProvider.html5Mode(true);
   $routeProvider
@@ -41,6 +42,7 @@ RexApp.config(['$routeProvider', '$locationProvider', function($routeProvider, $
   })
 }])
 
+// Rootscope and User Service
 RexApp.run(['$rootScope', 'UserService',function($rootScope, UserService){
 
   console.log('ANGULAR READY')

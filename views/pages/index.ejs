@@ -1,3 +1,5 @@
+<!-- SIDE NAV -->
+
 <div ng-app="RexApp">
 
   <div layout="row" id="navbar" ng-controller="navCtrl">
@@ -7,7 +9,6 @@
       <a ng-click="closeLeftMenu()" class="nav-links waves-effect waves-purple btn-flat" href = "/myrex">MY REX</a><br>
       <a ng-click="closeLeftMenu()" class="nav-links waves-effect waves-purple btn-flat" href = "/addrex">ADD REX</a><br>
       <a ng-click="closeLeftMenu()" class="nav-links waves-effect waves-purple btn-flat" href = "/search">SEARCH</a><br>
-      <!-- <a ng-click="closeLeftMenu()" class="waves-effect waves-light btn" aria-label ng-click="showMyModal()">SHOW REX MODAL</a> -->
       <a ng-show="currentUser" class="nav-links waves-effect waves-purple btn-flat" aria-label ng-click="logOut()">LOGOUT</a>
     </md-sidenav>
   <md-content>
