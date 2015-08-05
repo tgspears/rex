@@ -1,3 +1,6 @@
+<!-- ADD A REX FORM -->
+<!-- COMMENTED OUT CODE IS NOT TRASH CODE, PLEASE RETAIN -->
+
 <div id="addARexPage">
 
   <md-button class="add-search-btn md-raised indigo darken-4 waves-effect waves-purple" href="/search"> <i class="mdi-action-search"></i>SEARCH LOCATIONS </md-button>
@@ -8,7 +11,7 @@
 
   <form ng-submit="addRex()">
 
-
+  <!-- Drop down to select list association -->
     <div class="input-field col s12">
       <select class="rexSelect browser-default" required ng-model="newRex.listId" value="">
         <option value="{{rex.list_id}}" required disabled selected>SELECT THIS REX'S LIST: </option>
@@ -17,6 +20,8 @@
       </select>
      
     </div>
+
+
 
     <md-input-container>
       <label>Name: {{rex.name}}</label>

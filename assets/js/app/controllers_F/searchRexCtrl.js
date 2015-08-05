@@ -2,6 +2,7 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 
 	$scope.UserService = UserService;
 
+// current user
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
     if($scope.currentUser==false){
@@ -9,9 +10,8 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
     }
   });
 
-
+// yelp search function
 	$scope.yelpSearch = function(){
-
 		var yelpReq = {
 			method: 'GET',
 			url: '/yelp',
@@ -20,18 +20,14 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 				term:$scope.searchTerm
 			}
 		}
-
 		$http(yelpReq).success(function(data){
 			$scope.results = data.data.businesses;
 			$scope.total = data.data.total;
 		})
-
    }
 
-
+// add yelp to user's rexes
    $scope.addYelpRex = function(idx){
-
-
    	var newYelpRex = {
 			name:$scope.results[idx].name,
 			street:$scope.results[idx].location.address[0],
@@ -41,16 +37,12 @@ RexApp.controller('searchRexCtrl', ['$scope', '$http', '$location', 'UserService
 			phone:$scope.results[idx].phone,
 			website:$scope.results[idx].url
 		}
-
 		console.log(newYelpRex);
-
 		$http.post('/api/rex', newYelpRex)
 		.success(function(data){
 			var id=data.id
 			$location.path('/editit/'+id)
 		})
-
    }
-
 
 }])

@@ -6,19 +6,13 @@
 */
 
 module.exports = {
-
   attributes: {
     title:{
       type:'string',
       required:true
     },
-    // description:{
-    //   type:'text',
-    //   required:true
-    // },
 
     ////////ASSOCIATIONS/////////
-
     //has many
     rex:{
       collection:'Rex',
@@ -28,8 +22,6 @@ module.exports = {
     user:{
       model:'User'
     }
-
   }
-
 };
 

@@ -2,10 +2,12 @@ RexApp.controller('sendEmailModalCtrl', ['rex','$scope','UserService','$mdDialog
 
 	$scope.rex = rex;
 
+// close modal
   $scope.closeDialog = function(){
     $mdDialog.hide();
   }
 
+// send rex email to friend
   $scope.sendEmail = function(target,name,city,email){
 
     var emailParams = {
@@ -67,7 +69,5 @@ RexApp.controller('sendEmailModalCtrl', ['rex','$scope','UserService','$mdDialog
     })
 
     $scope.closeDialog();
-
   }
-
 }])

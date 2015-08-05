@@ -49,6 +49,7 @@ PURPLE:rgb(148,36,159) purple lighten-1;
 		color:rgb(16,26,89);
 	}
 
+/*START OF MOBILE STYLING*/
 
 @media only screen and (min-device-width : 481px){
 	md-bottom-sheet.md-default-theme{
@@ -100,11 +101,8 @@ PURPLE:rgb(148,36,159) purple lighten-1;
 	#about-field{
 		display:inline;
 	}
-
-
-
 }
-
+/*END OF MOBILE STYLING*/
 
 /*GENERAL*/
 body {
@@ -132,13 +130,17 @@ select.rexSelect.browser-default.ng-untouched {
 	position:relative;
 }
 
+/*START OF MOBILE STYLING*/
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	#what-is-rex{
 		width:150px;
 		margin-left:-30%;
 	}
 
-	}
+}
+
+/*END OF MOBILE STYLING*/
 
 
 
@@ -195,16 +197,10 @@ button#nav-btn{
 
 /*HOME PAGE*/
 
-
-
-
 #home-body{
 	background-color:rgb(16,26,89);
-	/*background-color:white;*/
 	height:100vh;
 }
-
-
 
 
 #home-graphic{
@@ -218,8 +214,6 @@ button#nav-btn{
 	margin-left:40.5%;
 	text-align:center;
 }
-
-
 
 #rex{
 	font-family: 'Exo 2', sans-serif;
@@ -245,6 +239,8 @@ button.md-raised.home-btns.md-button{
 
 }
 
+/*START OF MOBILE STYLING*/
+
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	#buttons{
@@ -264,15 +260,7 @@ button.md-raised.home-btns.md-button{
 
 }
 
-
-/*COLORS*/
-
-/*DARK BLUE: rgb(16,26,89) or indigo darken-4 (not quite)
-YELLOW: rgb(255,241,94) OR yellow lighten-2
-GRAY: rgb(45,49,60) OR grey darken-4
-WHITE: 
-PURPLE:rgb(148,36,159) purple lighten-1;
-*/
+/*END OF MOBILE STYLING*/
 
 
 /*HOME PAGE MODALS*/
@@ -440,6 +428,7 @@ i.mdi-navigation-close{
 	top:-8px;
 }
 
+/*START OF MOBILE STYLING*/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	.each-result{
@@ -461,7 +450,7 @@ i.mdi-navigation-close{
     }
 
 }
-
+/*END OF MOBILE STYLING*/
 
 
 
@@ -486,6 +475,8 @@ i.mdi-navigation-close{
 	bottom:9px;
 }
 
+/*START OF MOBILE STYLING*/
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 	#stubborn {
@@ -493,6 +484,8 @@ i.mdi-navigation-close{
 		bottom: 9px;
 	}
 }
+
+/*END OF MOBILE STYLING*/
 
 
 
@@ -513,11 +506,14 @@ i.mdi-navigation-close{
 
 }
 
+/*START OF MOBILE STYLING*/
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 	#listoflists{
 		width:85%;
 		}
 }
+
+/*END OF MOBILE STYLING*/
 
 .btn-stubborn{
 	margin-top:-10px;
@@ -651,6 +647,8 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	margin-left:10%;
 }
 
+/*START OF MOBILE STYLING*/
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 	.collapsible{
@@ -667,6 +665,8 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	}
 
 }
+
+/*END OF MOBILE STYLING*/
 
 .collapsible-body{
 	overflow:auto;
@@ -724,6 +724,8 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	margin-top:2%;
 }
 
+/*START OF MOBILE STYLING*/
+
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
 	.rex-btns{
@@ -750,11 +752,15 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	}
 }
 
+/*END OF MOBILE STYLING*/
+
 /*ADD LIST MODAL*/
 
 #newList-header{
 	margin-bottom:10px;
 }
+
+/*START OF MOBILE STYLING*/
 
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
@@ -763,6 +769,8 @@ a.addloc-btn.btn-floating.btn.waves-effect.waves-light.purple.lighten-1{
 	}
 
 }
+
+/*END OF MOBILE STYLING*/
 
 
 

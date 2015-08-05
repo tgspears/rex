@@ -4,7 +4,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
 	$scope.UserService = UserService;
   $scope.lists = [];
 
-
+// Current user
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
 
@@ -13,6 +13,7 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
     }
   });
 
+// Shows lists for current user
 	$scope.showList = function(){
 
     $http({
@@ -31,8 +32,9 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
     })
   }
 
-   $scope.addList = function(){
+  // Add lists for current user
 
+   $scope.addList = function(){
 
     var newList = {
       title:$scope.newList.title,
@@ -44,19 +46,16 @@ RexApp.controller('addListModalCtrl', ['$scope', '$http', 'UserService', '$mdToa
       $scope.lists.push(data)
       $mdToast.show($mdToast.simple().content(data.title+' has been added!'))
       $scope.closeDialog(data);
-
     })
       $scope.showList();
-
   }
+
+  // Close modal function
 
    $scope.closeDialog = function(data){
     console.log('clicked closeDialog()'+data)
     $mdDialog.hide();
   }
-
   $scope.showList();
-
-
 
 }])

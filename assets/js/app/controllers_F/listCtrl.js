@@ -4,7 +4,7 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
 	$scope.UserService = UserService;
   $scope.lists = [];
 
-
+// current user
   $scope.$watchCollection('UserService',function(){
     $scope.currentUser = UserService.currentUser;
     if($scope.currentUser==false){
@@ -12,19 +12,21 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
     }
   });
 
+// closes list modal
    $scope.closeDialog = function(){
     $mdDialog.hide();
   }
 
+// delete a list
   $scope.deleteList = function(idx){
     $http.delete('/api/list/'+idx)
     .success(function(data,status){
       $mdToast.show($mdToast.simple().content('Your List has been deleted.'))
-
       $scope.showList();
     })
   }
 
+// show user lists
   $scope.showList = function(){
 
     $http({
@@ -42,13 +44,12 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
     })
   }
 
+// add a list function
   $scope.addList = function(){
-
     var newList = {
       title:$scope.newList.title,
       userId: $scope.currentUser.id
     }
-
     $http.post('/api/list', newList)
     .success(function(data){
       $scope.lists.push(data)
@@ -58,10 +59,9 @@ RexApp.controller('listCtrl', ['$mdDialog', '$scope', 'UserService', '$location'
     location.reload(false);
   }
 
+// show add list content in modal
   $scope.showDialog =function($event) {
-
        $mdDialog.show({
-
          templateUrl:'views/addListModal.html',
          clickOutsideToClose: true,
          controller: 'listCtrl'
